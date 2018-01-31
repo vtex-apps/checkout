@@ -1,0 +1,18 @@
+{
+  "pages": {
+    "checkout": {
+      "path": "/legacy-extensions/checkout"
+    },
+    "orderplaced": {
+      "path": "/legacy-extensions/orderplaced"
+    }
+  },
+  "extensions": {
+    "checkout/buttons": {
+      "component": "vtex.render-runtime/ExtensionContainer"
+    },
+    "orderplaced/pixels": {
+      "component": "vtex.render-runtime/ExtensionContainer"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "checkout",
+  "vendor": "vtex",
+  "version": "0.1.0",
+  "title": "VTEX Checkout",
+  "description": "VTEX Checkout",
+  "mustUpdateAt": "2019-01-31",
+  "categories": [],
+  "registries": [
+    "smartcheckout"
+  ],
+  "settingsSchema": {},
+  "dependencies": {
+    "vtex.render-runtime": "6.x"
+  },
+  "builders": {
+    "pages": "0.x"
+  }
+}
