@@ -1,10 +1,12 @@
 {
   "pages": {
     "checkout": {
-      "path": "/legacy-extensions/checkout"
+      "path": "/legacy-extensions/checkout",
+      "disableExternals": ["tachyons"]
     },
     "orderplaced": {
-      "path": "/legacy-extensions/orderplaced"
+      "path": "/legacy-extensions/orderplaced",
+      "disableExternals": ["tachyons"]
     }
   },
   "extensions": {
