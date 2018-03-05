@@ -11,7 +11,7 @@
   ],
   "settingsSchema": {},
   "dependencies": {
-    "vtex.render-runtime": "6.x"
+    "vtex.render-runtime": "7.x"
   },
   "builders": {
     "pages": "0.x"
