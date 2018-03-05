@@ -15,5 +15,8 @@
   },
   "builders": {
     "pages": "0.x"
+  },
+  "scripts": {
+    "postreleasy": "vtex publish --public --verbose"
   }
 }
