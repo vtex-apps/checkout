@@ -2,7 +2,8 @@
   "pages": {
     "checkout": {
       "path": "/legacy-extensions/checkout",
-      "disableExternals": ["tachyons"]
+      "disableExternals": ["tachyons"],
+      "theme": "theme"
     },
     "orderplaced": {
       "path": "/legacy-extensions/orderplaced",

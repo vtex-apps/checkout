@@ -1,0 +1,35 @@
+.extensions-checkout-buttons-container {
+  margin-top: -10px;
+}
+
+.or-divisor {
+  font-size: 16px;
+  text-align: center;
+  margin: -20px auto 10px auto;
+  padding: 2px 4px;
+  background: #fff;
+}
+
+.btn-visa-container {
+  text-align: center;
+}
+
+#render-checkout-buttons {
+  border: 1px solid #f4f4f4;
+  border-radius: 4px;
+  padding: 10px;
+  width: 270px;
+  float: right;
+}
+
+.vc-tell-me-more {
+  text-align: right;
+  color: #ccc;
+}
+
+@media (max-width: 490px) {
+  .btn-list {
+    width: auto;
+    float: none;
+  }
+}
