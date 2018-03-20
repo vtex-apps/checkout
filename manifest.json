@@ -1,7 +1,7 @@
 {
   "name": "checkout",
   "vendor": "vtex",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "title": "VTEX Checkout",
   "description": "VTEX Checkout",
   "mustUpdateAt": "2019-01-31",
