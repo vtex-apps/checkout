@@ -12,9 +12,16 @@
   "settingsSchema": {},
   "builders": {
     "pages": "0.x",
-    "react": "2.x"
+    "react": "2.x",
+    "node": "3.x"
   },
   "scripts": {
+    "prereleasy": "bash lint.sh",
     "postreleasy": "vtex publish --public --verbose"
-  }
+  },
+  "policies": [
+    {
+      "name": "read-workspace-apps"
+    }
+  ]
 }

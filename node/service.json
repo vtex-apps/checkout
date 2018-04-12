@@ -1,0 +1,14 @@
+{
+  "stack": "nodejs",
+  "memory": 256,
+  "runtimeArgs": [
+    "--optimize_for_size",
+    "--max_old_space_size=192"
+  ],
+  "routes": {
+    "setupCheckout": {
+      "path": "/api/vtex/checkout",
+      "public": true
+    }
+  }
+}
