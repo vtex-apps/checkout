@@ -6,9 +6,10 @@
     "--max_old_space_size=192"
   ],
   "routes": {
-    "setupCheckout": {
-      "path": "/api/vtex/checkout",
-      "public": true
+    "settings": {
+      "path": "/_v/checkout-settings",
+      "public": true,
+      "smartcache": true
     }
   }
 }

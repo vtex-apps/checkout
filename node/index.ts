@@ -7,42 +7,21 @@ const CHECKOUT_BUILD_FILE = 'dist/vtex.checkout/checkout.json'
 const RESPONSE_CACHE_TTL = 60 * 60
 const CHECKOUT_TIMEOUT = 30 * 1000
 
+const checkoutMajor = process.env.VTEX_APP_VERSION.split('.')[0]
+const checkoutAppId = `vtex.checkout@${checkoutMajor}.x`
+
 const cacheStorage = new NodeCache({
   checkperiod: RESPONSE_CACHE_TTL,
   stdTTL: RESPONSE_CACHE_TTL,
   useClones: false,
 })
 
-const getUserAgent = () => {
-  return process.env.VTEX_APP_ID
-}
-
-export const getApps = (ctx: ColossusContext): Apps => {
-  const {account, authToken, region, workspace} = ctx.vtex
-  const userAgent: string = getUserAgent()
-  const opts: InstanceOptions = {
-    account,
-    authToken,
-    cacheStorage,
-    region,
-    userAgent,
-    workspace,
-    timeout: CHECKOUT_TIMEOUT
-  }
-  return new Apps(opts)
-}
-
-const getCheckoutMajor = () => {
-  return parseInt(process.env.VTEX_APP_VERSION.split('.')[0], 10)
-}
-
-const getCheckoutAppId = () => {
-  return `vtex.checkout@${getCheckoutMajor()}.x`
+const instanceOptions: InstanceOptions = {
+  cacheStorage,
+  timeout: CHECKOUT_TIMEOUT
 }
 
 const getIdWithoutBuild = (id: string) => id.split('+build')[0]
-
-const toString = ({data}) => data.toString()
 
 const notFound = <T>(fallback: T) => (error): T => {
   if (error.response && error.response.status === 404) {
@@ -51,42 +30,27 @@ const notFound = <T>(fallback: T) => (error): T => {
   throw error
 }
 
-const getCheckoutFile = (apps: Apps) => async (app: string) => {
+const getCheckoutFile = (apps: Apps) => (app: string): Promise<CheckoutSettings> => {
   return apps
     .getAppFile(app, CHECKOUT_BUILD_FILE)
-    .then(toString)
+    .then(({data}) => data.toString())
     .then(JSON.parse)
-    .catch(notFound(null))
-      }
+    .catch(notFound({}))
+}
 
-const setCheckout = async (ctx: ColossusContext) => {
-  const apps: Apps = getApps(ctx)
-  const filter: String = getCheckoutAppId()
+const settings = async (ctx: ColossusContext) => {
+  const apps = new Apps(ctx.vtex, instanceOptions)
+  const dependencies = await apps.getDependencies(checkoutAppId)
+  const dependenciesIds = map(getIdWithoutBuild, keys(dependencies))
+  const appsSettings = await Promise.all(map(getCheckoutFile(apps), dependenciesIds))
+  const selfSettings = await apps.getAppSettings(checkoutAppId) as CheckoutSettings
+  const mergedSettings = mergeAll(appsSettings.concat(selfSettings))
 
-  const dependencies: String[] = map(getIdWithoutBuild,
-                                     keys(await apps.getDependencies(filter)))
-
-  const files = await Promise.all(map(getCheckoutFile(apps),
-                                      dependencies))
-
-  const appSettings = await apps.getAppSettings(filter)
-
-  const mergedSettings = mergeAll(files.concat(appSettings))
-
-  ctx.set('Cache-Control', 'no-cache')
-  ctx.response.status = 200
   ctx.response.body = mergedSettings
-
-  ctx.set('X-VTEX-Meta-Bucket', [
-    'apps.meta.settings',
-    'apps.meta.dependencies',
-    'apps.meta.installations',
-    'apps.meta.links'
-  ])
 }
 
 export default {
   routes: {
-    setupCheckout: setCheckout
+    settings
   }
 }

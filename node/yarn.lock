@@ -102,9 +102,9 @@
     "@types/express-serve-static-core" "*"
     "@types/mime" "*"
 
-"@vtex/api@^0.37.1":
-  version "0.37.1"
-  resolved "https://registry.yarnpkg.com/@vtex/api/-/api-0.37.1.tgz#5409a8c67000ee402343660e08b975756a69e40a"
+"@vtex/api@^0.38.0":
+  version "0.38.0"
+  resolved "https://registry.yarnpkg.com/@vtex/api/-/api-0.38.0.tgz#ee02430a4d79696a39f18cef850543bd4b2be77e"
   dependencies:
     archiver "^2.1.0"
     axios "^0.16.0"

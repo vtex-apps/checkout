@@ -2,7 +2,7 @@
   "name": "vtex.checkout",
   "version": null,
   "dependencies": {
-    "@vtex/api": "^0.37.1",
+    "@vtex/api": "^0.38.0",
     "axios": "^0.18.0",
     "node-cache": "^4.2.0",
     "ramda": "^0.25.0"

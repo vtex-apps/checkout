@@ -8,6 +8,7 @@ declare module 'colossus' {
     params: {
       [param: string]: string
     }
+    userAgent: string
     region: string
     route: string
   }
@@ -15,4 +16,21 @@ declare module 'colossus' {
   export interface ColossusContext extends KoaContext {
     vtex: IOContext
   }
+}
+
+interface CheckoutSettings {
+  paymentConfiguration: {
+    requiresAuthenticationForPreAuthorizedPaymentOption: boolean
+  },
+  taxConfiguration: {
+    url: string
+    authorizationHeader: string
+    allowExecutionAfterErrors: boolean
+    integratedAuthentication: boolean
+  },
+  minimumQuantityAccumulatedForItems: number
+  decimalDigitsPrecision: number
+  minimumValueAccumulated: number
+  allowMultipleDeliveries: boolean
+  allowManualPrice: boolean
 }
