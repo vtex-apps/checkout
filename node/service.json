@@ -7,8 +7,7 @@
   ],
   "routes": {
     "settings": {
-      "path": "/_v/checkout-settings",
-      "public": true,
+      "path": "/settings",
       "smartcache": true
     }
   }
