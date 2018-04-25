@@ -1,7 +1,7 @@
 {
   "name": "checkout",
   "vendor": "vtex",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "title": "VTEX Checkout",
   "description": "VTEX Checkout",
   "mustUpdateAt": "2019-01-31",
@@ -12,9 +12,16 @@
   "settingsSchema": {},
   "builders": {
     "pages": "0.x",
-    "react": "2.x"
+    "react": "2.x",
+    "node": "3.x"
   },
   "scripts": {
+    "prereleasy": "bash lint.sh",
     "postreleasy": "vtex publish --public --verbose"
-  }
+  },
+  "policies": [
+    {
+      "name": "read-workspace-apps"
+    }
+  ]
 }
