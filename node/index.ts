@@ -1,7 +1,8 @@
 import {Apps, InstanceOptions} from '@vtex/api'
 import {ColossusContext} from 'colossus'
 import * as NodeCache from 'node-cache'
-import {keys, map, mergeAll} from 'ramda'
+import {compose, keys, map, mergeAll, lensPath,
+        over, prop, replace, zipWith} from 'ramda'
 
 const CHECKOUT_BUILD_FILE = 'dist/vtex.checkout/checkout.json'
 const RESPONSE_CACHE_TTL = 60 * 60
@@ -38,6 +39,13 @@ const getCheckoutFile = (apps: Apps) => (app: string): Promise<CheckoutSettings>
     .catch(notFound({}))
 }
 
+const replacePatterns = (patterns) => {
+  const templates = map(prop("template"), patterns)
+  const replacements = map(prop("replacement"), patterns)
+  const replaceFnArray = zipWith(replace, templates, replacements)
+  return compose(...replaceFnArray)
+}
+
 const settings = async (ctx: ColossusContext) => {
   const apps = new Apps(ctx.vtex, instanceOptions)
   const dependencies = await apps.getDependencies(checkoutAppId)
@@ -46,7 +54,27 @@ const settings = async (ctx: ColossusContext) => {
   const selfSettings = await apps.getAppSettings(checkoutAppId) as CheckoutSettings
   const mergedSettings = mergeAll(appsSettings.concat(selfSettings))
 
-  ctx.response.body = mergedSettings
+  const patterns = [
+    {
+      template: "{{account}}",
+      replacement: ctx.vtex.account
+    },
+    {
+      template: "{{region}}",
+      replacement: process.env.VTEX_REGION
+    },
+    {
+      template: "{{workspace}}",
+      replacement: ctx.vtex.workspace
+    }
+  ]
+  const urlLens = lensPath(["taxConfiguration", "url"])
+
+  try {
+    ctx.response.body = over(urlLens, replacePatterns(patterns), mergedSettings)
+  } catch (e) {
+    ctx.response.body = mergedSettings
+  }
 }
 
 export default {
