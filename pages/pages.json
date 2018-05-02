@@ -11,7 +11,13 @@
     }
   },
   "extensions": {
+    "checkout": {
+      "component": "vtex.render-runtime/LegacyExtensionContainer"
+    },
     "checkout/buttons": {
+      "component": "vtex.render-runtime/ExtensionContainer"
+    },
+    "checkout/payments": {
       "component": "vtex.render-runtime/ExtensionContainer"
     },
     "orderplaced/pixels": {
