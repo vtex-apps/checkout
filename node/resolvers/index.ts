@@ -68,6 +68,5 @@ export const paymentConfiguration = async (obj, args, ctx: ColossusContext, info
 
 export const token = async (obj, args, ctx: ColossusContext, info) => {
   const {vtex: {authToken}} = ctx
-  console.log(authToken)
-  return true
+  return authToken
 }

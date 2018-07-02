@@ -9,6 +9,20 @@
   "registries": [
     "smartcheckout"
   ],
+  "settingsUiSchema": {
+    "apps": {
+      "ui:options": {
+        "orderable": false
+      },
+      "items": {
+        "fields": {
+          "ui:options": {
+            "orderable": false
+          }
+        }
+      }
+    }
+  },
   "settingsSchema": {
     "title": "VTEX Checkout",
     "description": "VTEX Checkout Settings",
@@ -46,7 +60,27 @@
       },
       "apps": {
         "title": "Apps",
-        "type": "string"
+        "type": "array",
+        "items": {
+          "type":"object",
+          "properties": {
+            "id": {
+              "title": "ID",
+              "type": "string"
+            },
+            "major": {
+              "title": "Major",
+              "type": "integer"
+            },
+            "fields": {
+              "title": "Fields",
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        }
       },
       "taxConfiguration": {
         "title": "Tax Configuration",

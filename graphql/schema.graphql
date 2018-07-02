@@ -28,5 +28,6 @@ type Query {
   settings: Settings
   taxConfiguration: TaxConfiguration
   paymentConfiguration: PaymentConfiguration
-  token: Boolean
+  # token: Boolean
+  token: String
 }
