@@ -9,11 +9,74 @@
   "registries": [
     "smartcheckout"
   ],
-  "settingsSchema": {},
+  "settingsSchema": {
+    "title": "VTEX Checkout",
+    "description": "VTEX Checkout Settings",
+    "type": "object",
+    "properties": {
+      "decimalDigitsPrecision": {
+        "title": "Decimal Digits Precision",
+        "type": "integer"
+      },
+      "minimumQuantityAccumulatedForItems": {
+        "title": "Minimum Quantity Accumulated for Items",
+        "type": "integer"
+      },
+      "minimumValueAccumulated": {
+        "title": "Minimum Value Accumulated",
+        "type": "integer"
+      },
+      "allowMultipleDeliveries": {
+        "title": "Allow Multiple Deliveries",
+        "type": "boolean"
+      },
+      "allowManualPrice": {
+        "title": "Allow Manual Price",
+        "type": "boolean"
+      },
+      "paymentConfiguration": {
+        "title": "Payment Configuration",
+        "type": "object",
+        "properties": {
+          "requiresAuthenticationForPreAuthorizedPaymentOption": {
+            "title": "Requires Authentication for Pre-authorized Payment Option",
+            "type": "boolean"
+          }
+        }
+      },
+      "apps": {
+        "title": "Apps",
+        "type": "string"
+      },
+      "taxConfiguration": {
+        "title": "Tax Configuration",
+        "type": "object",
+        "properties": {
+            "allowExecutionAfterErrors": {
+            "title": "Allow Execution After Errors",
+            "type": "boolean"
+          },
+          "authorizationHeader": {
+            "title": "Authorization Header",
+            "type": "string"
+          },
+          "integratedAuthentication": {
+            "title": "Integrated Authentication",
+            "type": "boolean"
+          },
+          "url": {
+            "title": "Url",
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
   "builders": {
     "pages": "0.x",
     "react": "2.x",
-    "node": "3.x"
+    "node": "3.x",
+    "graphql": "1.x"
   },
   "scripts": {
     "prereleasy": "bash lint.sh",
