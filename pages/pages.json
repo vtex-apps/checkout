@@ -2,17 +2,16 @@
   "pages": {
     "checkout": {
       "path": "/legacy-extensions/checkout",
-      "disableExternals": ["tachyons"],
-      "theme": "theme"
+      "disableExternals": ["tachyons", "rc.js"]
     },
     "orderplaced": {
       "path": "/legacy-extensions/orderplaced",
-      "disableExternals": ["tachyons"]
+      "disableExternals": ["tachyons", "rc.js"]
     }
   },
   "extensions": {
     "checkout": {
-      "component": "vtex.render-runtime/LegacyExtensionContainer"
+      "component": "CheckoutContainer"
     },
     "checkout/buttons": {
       "component": "vtex.render-runtime/ExtensionContainer"
