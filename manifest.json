@@ -10,6 +10,7 @@
     "smartcheckout"
   ],
   "settingsUiSchema": {
+    "ui:readonly": true,
     "apps": {
       "ui:options": {
         "orderable": false
