@@ -1,72 +1,35 @@
 import {Apps, InstanceOptions} from '@vtex/api'
-import {ColossusContext} from 'colossus'
 import * as LRU from 'lru-cache'
-import {Forbidden} from '../exceptions/forbidden'
+import {map} from 'ramda'
+import {saveSettings} from './saveSettings'
+import {settings} from './settings'
 
-const RESPONSE_CACHE_TTL = 60 * 60
+const RESPONSE_CACHE_TTL_MS = 60 * 60 * 1e3
 const MAX_LRU_CACHE = 1e3
-const CHECKOUT_TIMEOUT = 30 * 1000
-
-const checkoutMajor = process.env.VTEX_APP_VERSION.split('.')[0]
-const checkoutAppId = `vtex.checkout@${checkoutMajor}.x`
+const CHECKOUT_TIMEOUT_MS = 30 * 1000
 
 const cacheStorage = new LRU({
   max: MAX_LRU_CACHE,
-  maxAge: RESPONSE_CACHE_TTL,
+  maxAge: RESPONSE_CACHE_TTL_MS,
   useClones: false,
 })
 
 const instanceOptions: InstanceOptions = {
   cacheStorage,
-  timeout: CHECKOUT_TIMEOUT
+  timeout: CHECKOUT_TIMEOUT_MS
 }
 
-const appId = process.env.VTEX_APP_ID
-
-const getAppSettings = async (ctx: ColossusContext) => {
+const prepare = (resolver) => async (root, args, ctx: ColossusContext, info) => {
   const {vtex: IOContext} = ctx
-  const apps = new Apps(IOContext, instanceOptions)
-  return await apps.getAppSettings(checkoutAppId)
+  ctx.apps = new Apps(IOContext, instanceOptions)
+  return resolver(root, args, ctx, info)
 }
 
-export const settings = async (obj, args, ctx: ColossusContext, info) => {
-  const {request: {headers}} = ctx
-  const caller = headers['x-vtex-caller']
-
-  if (caller === appId) {
-    const ret = await getAppSettings(ctx)
-    ret.apps = ret.apps && JSON.parse(ret.apps)
-    return ret
-  }
-
-  throw new Forbidden()
-}
-
-export const taxConfiguration = async (obj, args, ctx: ColossusContext, info) => {
-  const {request: {headers}} = ctx
-  const caller = headers['x-vtex-caller']
-
-  if (caller === appId) {
-    const ret = await getAppSettings(ctx)
-    return ret && ret.taxConfiguration
-  }
-
-  throw new Forbidden()
-}
-
-export const paymentConfiguration = async (obj, args, ctx: ColossusContext, info) => {
-  const {request: {headers}} = ctx
-  const caller = headers['x-vtex-caller']
-
-  if (caller === appId) {
-    const ret = await getAppSettings(ctx)
-    return ret && ret.paymentConfiguration
-  }
-
-  throw new Forbidden()
-}
-
-export const token = async (obj, args, ctx: ColossusContext, info) => {
-  const {vtex: {authToken}} = ctx
-  return authToken
+export const resolvers = {
+  Mutation: map(prepare, {
+    saveSettings
+  }),
+  Query: map(prepare, {
+    settings
+  }),
 }

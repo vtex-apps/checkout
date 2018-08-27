@@ -1,33 +1,7 @@
-type TaxConfiguration {
-  allowExecutionAfterErrors: Boolean
-  authorizationHeader: String
-  integratedAuthentication: Boolean
-  url: String
-}
-
-type PaymentConfiguration {
-  requiresAuthenticationForPreAuthorizedPaymentOption: Boolean
-}
-
-type App {
-  fields: [String]
-  id: String
-  major: Int
-}
-
-type Settings {
-  apps: [App]
-  allowManualPrice: Boolean
-  allowMultipleDeliveries: Boolean
-  decimalDigitsPrecision: Int
-  minimumQuantityAccumulatedForItems: Int
-  minimumValueAccumulated: Int
-}
-
 type Query {
-  settings: Settings
-  taxConfiguration: TaxConfiguration
-  paymentConfiguration: PaymentConfiguration
-  # token: Boolean
-  token: String
+  settings: Settings! @cacheControl(scope: PRIVATE)
+}
+
+type Mutation {
+  saveSettings(settings: SettingsInput!): Settings
 }

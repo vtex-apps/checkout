@@ -1,0 +1,55 @@
+type Settings {
+  taxConfiguration: TaxConfiguration
+  paymentConfiguration: PaymentConfiguration
+  minimumQuantityAccumulatedForItems: Int
+  decimalDigitsPrecision: Int
+  minimumValueAccumulated: Int
+  apps: [App]
+  allowMultipleDeliveries: Boolean
+  allowManualPrice: Boolean
+}
+
+input SettingsInput {
+  taxConfiguration: TaxConfigurationInput
+  paymentConfiguration: PaymentConfigurationInput
+  minimumQuantityAccumulatedForItems: Int
+  decimalDigitsPrecision: Int
+  minimumValueAccumulated: Int
+  apps: [AppInput]
+  allowMultipleDeliveries: Boolean
+  allowManualPrice: Boolean
+}
+
+input TaxConfigurationInput {
+  allowExecutionAfterErrors: Boolean
+  authorizationHeader: String
+  integratedAuthentication: Boolean
+  url: String
+}
+
+type TaxConfiguration {
+  allowExecutionAfterErrors: Boolean
+  authorizationHeader: String
+  integratedAuthentication: Boolean
+  url: String
+}
+
+input PaymentConfigurationInput {
+  requiresAuthenticationForPreAuthorizedPaymentOption: Boolean
+}
+
+type PaymentConfiguration {
+  requiresAuthenticationForPreAuthorizedPaymentOption: Boolean
+}
+
+input AppInput {
+  fields: [String]
+  id: String
+  major: Int
+}
+
+type App {
+  fields: [String]
+  id: String
+  major: Int
+}

@@ -1,12 +1,5 @@
-import {paymentConfiguration, settings, taxConfiguration, token} from './resolvers'
+import {resolvers} from './resolvers'
 
 export default {
-  graphql: {
-    Query: {
-      paymentConfiguration,
-      settings,
-      taxConfiguration,
-      token,
-    }
-  }
+  graphql: resolvers
 }

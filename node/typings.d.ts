@@ -1,36 +1,39 @@
-declare module 'colossus' {
-  import {Context as KoaContext} from 'koa'
+import { Apps, IOContext } from "@vtex/api"
+import {Context as KoaContext} from 'koa'
 
-  export interface IOContext {
-    account: string
-    workspace: string
-    authToken: string
-    params: {
-      [param: string]: string
-    }
-    userAgent: string
-    region: string
-    route: string
-  }
-
-  export interface ColossusContext extends KoaContext {
+declare global {
+  interface ColossusContext extends KoaContext {
     vtex: IOContext
+    apps: Apps
+  }
+
+  interface Settings {
+    taxConfiguration: TaxConfiguration
+    paymentConfiguration: PaymentConfiguration
+    minimumQuantityAccumulatedForItems: number
+    decimalDigitsPrecision: number
+    minimumValueAccumulated: number
+    apps: [App]
+    allowMultipleDeliveries: boolean
+    allowManualPrice: boolean
+  }
+
+  interface App {
+    fields: [string]
+    id: string
+    major: number
+  }
+
+  interface TaxConfiguration {
+    allowExecutionAfterErrors: boolean
+    authorizationHeader: string
+    integratedAuthentication: boolean
+    url: string
+  }
+
+  interface PaymentConfiguration {
+    requiresAuthenticationForPreAuthorizedPaymentOption: boolean
   }
 }
 
-interface CheckoutSettings {
-  paymentConfiguration: {
-    requiresAuthenticationForPreAuthorizedPaymentOption: boolean
-  },
-  taxConfiguration: {
-    url: string
-    authorizationHeader: string
-    allowExecutionAfterErrors: boolean
-    integratedAuthentication: boolean
-  },
-  minimumQuantityAccumulatedForItems: number
-  decimalDigitsPrecision: number
-  minimumValueAccumulated: number
-  allowMultipleDeliveries: boolean
-  allowManualPrice: boolean
-}
+export {}
