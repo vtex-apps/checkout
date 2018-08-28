@@ -120,6 +120,9 @@
   "policies": [
     {
       "name": "read-workspace-apps"
+    },
+    {
+      "name": "update-app-settings"
     }
   ]
 }
