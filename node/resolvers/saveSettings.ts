@@ -12,8 +12,6 @@ export const saveSettings = async (_, args: {settings: Settings}, ctx: ColossusC
   const settings: Settings = deepmerge(oldSettings, newSettings, {arrayMerge})
   return ctx.apps.saveAppSettings(checkoutAppLocator, settings)
 
-  // console.log(settings)
-
   // if (caller === checkoutAppId) {
   // }
 
