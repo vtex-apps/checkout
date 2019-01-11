@@ -7,6 +7,9 @@
     "orderplaced": {
       "path": "/legacy-extensions/orderplaced",
       "disableExternals": ["tachyons", "rc.js"]
+    },
+    "checkout-test": {
+      "path": "/test"
     }
   },
   "extensions": {
@@ -21,6 +24,9 @@
     },
     "orderplaced/pixels": {
       "component": "vtex.render-runtime/ExtensionContainer"
+    },
+    "checkout-test": {
+      "component": "index"
     }
   }
 }

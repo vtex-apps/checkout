@@ -1,0 +1,22 @@
+query CheckoutHtml($major: Int, $environment: String) {
+  checkoutHtml(major: $major, environment: $environment) {
+    head {
+      type,
+      innerHTML,
+      attributes {
+        key,
+        value
+      }
+    },
+    bodyScripts {
+      type,
+      innerHTML,
+      attributes {
+        key,
+        value
+      }
+    },
+    body,
+    language
+  }
+}

@@ -15,6 +15,9 @@
     "react": "2.x",
     "node": "3.x"
   },
+  "dependencies": {
+    "vtex.checkout-graphql": "0.x"
+  },
   "scripts": {
     "prereleasy": "bash lint.sh",
     "postreleasy": "vtex publish --public --verbose"

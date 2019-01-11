@@ -10,7 +10,7 @@
   "devDependencies": {
     "@types/axios": "^0.14.0",
     "@types/koa": "^2.0.39",
-    "@types/node": "^7.0.8",
+    "@types/node": "^10.12.18",
     "@types/ramda": "types/npm-ramda#dist",
     "tslint": "^5.8.0",
     "tslint-config-vtex": "^2.0.0",
