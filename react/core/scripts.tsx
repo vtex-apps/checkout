@@ -1,10 +1,8 @@
 const extensionLoaderScript = '\n\
   (function(global) {\n\
-    var domResolve;\n\
     global.vtex.renderLoaderPromise = new Promise(function(resolve, reject) {\n\
-      domResolve = resolve;\
+      document.addEventListener("DOMContentLoaded", resolve);\n\
     });\n\
-    document.addEventListener("DOMContentLoaded", domResolve);\n\
     global.vtex.renderLoaderPromise.then(function() {\n\
       global.vtex.renderRuntime = global.__RUNTIME__;\n\
       global.vtex.renderLoader = {\n\
