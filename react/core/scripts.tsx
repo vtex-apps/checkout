@@ -19,16 +19,6 @@ const extensionLoaderScript = '\n\
   })(this)\n\
 '
 
-const changeLangScript = (lang: string) => {
-  return `\n\
-    (function() {\n\
-      var htmlDomNode = document.getElementsByTagName('html')[0];\n\
-      htmlDomNode.setAttribute('lang', '${lang}')\n\
-    })()\n\
-  `
-}
-
 export {
-  changeLangScript,
   extensionLoaderScript
 }
