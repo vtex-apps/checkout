@@ -1,8 +1,8 @@
 import * as R from 'ramda'
-import React, { createElement, Fragment } from 'react'
+import React, { Fragment } from 'react'
 import { Helmet } from 'render'
 
-import { changeLangScript, extensionLoaderScript } from './scripts'
+import { extensionLoaderScript } from './scripts'
 
 interface ScriptToReplace {
   shouldReplace: (el: SimplifiedHTMLElement) => boolean,
@@ -18,18 +18,16 @@ const pairsToObject = (arr : Pair[]) => {
   }, {}, arr) as any
 }
 
-const createAttributesObject = (el: SimplifiedHTMLElement, headFlag: boolean) => {
-  const { type, attributes, innerHTML } = el
-  return {
-    ... (!innerHTML || innerHTML === '') ? {} : ( headFlag ? { innerHTML } : { dangerouslySetInnerHTML: {__html: innerHTML} } ),
-    ... pairsToObject(attributes),
-  }
+const createAttributesObject = (el: SimplifiedHTMLElement) => {
+  return pairsToObject(el.attributes)
 }
 
-const createHtmlElement = (el: SimplifiedHTMLElement , index: number, headFlag = false) => {
-  return createElement(el.type, {
+const createHtmlElement = (el: SimplifiedHTMLElement , index: number) => {
+  const { type, innerHTML } = el
+  return React.createElement(type, {
     key: index,
-    ... createAttributesObject(el, headFlag),
+    ... createAttributesObject(el),
+    ... innerHTML.length > 0 ? { dangerouslySetInnerHTML: { __html: innerHTML } } : {},
   })
 }
 
@@ -44,10 +42,8 @@ const forceToWaitDOMContentLoaded = (el: SimplifiedHTMLElement): SimplifiedHTMLE
 }
 
 const withDefer = (el: SimplifiedHTMLElement): SimplifiedHTMLElement => {
-  const ret = (el.innerHTML.length > 0) ? el : { ...el, attributes: R.append({key: 'defer', value: true}, el.attributes)}
-  return ret
+  return (el.innerHTML.length > 0) ? el : { ...el, attributes: R.append({key: 'defer', value: true}, el.attributes)}
 }
-
 
 class HtmlPageBuilder {
 
@@ -66,7 +62,6 @@ class HtmlPageBuilder {
   public getBody() {
     return (
       <Fragment>
-        <script dangerouslySetInnerHTML={{__html: changeLangScript(this.language)}}></script>
         <div dangerouslySetInnerHTML={{__html: this.body}}></div>
         { this.getBodyScripts() }
       </Fragment>
@@ -74,30 +69,24 @@ class HtmlPageBuilder {
   }
 
   public getHelmetHead() {
-    const uniqueTags = [... new Set(R.map((el: SimplifiedHTMLElement) => {
-      return el.type
-    }, this.head))]
+    const headElements = this.head.map((el: SimplifiedHTMLElement, id: number) => {
+      return React.createElement(
+        el.type,
+        {key: `head#${id}`, ... createAttributesObject(el) },
+        el.innerHTML.length > 0 ? el.innerHTML : undefined
+      )
+    })
 
-    const headGroupedByTag: any = R.reduce((acc: any, tag: string) => {
-      const tagElements: SimplifiedHTMLElement[] = R.filter((el: SimplifiedHTMLElement) => el.type === tag, this.head)
-      return {
-        ...acc,
-        [tag]: R.map((el: SimplifiedHTMLElement) => createAttributesObject(el, true), tagElements),
-      }
-    }, {}, uniqueTags)
+    const elementsToAdd = headElements.filter((reactEl) => {
+      return reactEl.type !== 'script' || (reactEl.props.src ? !reactEl.props.src.includes('render-extension-loader.js') : true)
+    })
 
-    const scriptFilteredHead = {
-      ... headGroupedByTag,
-      script: R.filter((script: any) => {
-        return script.src ? !script.src.includes('render-extension-loader.js') : true
-      }, headGroupedByTag.script),
-    }
-
-    console.log(scriptFilteredHead)
-    return React.createElement(
-      Helmet,
-      scriptFilteredHead,
-      null
+    console.log('Head', elementsToAdd)
+    return (
+      <Helmet>
+        <html lang={`${this.language}`}></html>
+        { elementsToAdd }
+      </Helmet>
     )
   }
 
