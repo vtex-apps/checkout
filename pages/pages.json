@@ -8,8 +8,9 @@
       "path": "/legacy-extensions/orderplaced",
       "disableExternals": ["tachyons", "rc.js"]
     },
-    "checkout-test": {
-      "path": "/test"
+
+    "checkout-render": {
+      "path": "/checkout-render"
     }
   },
   "extensions": {
@@ -25,8 +26,17 @@
     "orderplaced/pixels": {
       "component": "vtex.render-runtime/ExtensionContainer"
     },
-    "checkout-test": {
+
+    "checkout-render": {
       "component": "index"
+    },
+    "checkout-render/buttons": {
+      "component": "vtex.render-runtime/ExtensionContainer",
+      "ssr": false
+    },
+    "checkout-render/payments": {
+      "component": "vtex.render-runtime/ExtensionContainer",
+      "ssr": false
     }
   }
 }
