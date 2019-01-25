@@ -18,12 +18,10 @@ const pairsToObject = (arr : Pair[]) => {
   }, {}, arr) as any
 }
 
-const createAttributesObject = (el: SimplifiedHTMLElement) => {
-  return pairsToObject(el.attributes)
-}
+const createAttributesObject = (el: SimplifiedHTMLElement) => pairsToObject(el.attributes)
 
 const createHtmlElement = (el: SimplifiedHTMLElement , index: number) => {
-  const { type, innerHTML } = el
+  const { type, innerHTML } : { type: string, innerHTML: string } = el
   return React.createElement(type, {
     key: index,
     ... createAttributesObject(el),
