@@ -21,11 +21,10 @@ const pairsToObject = (arr : Pair[]) => {
 const createAttributesObject = (el: SimplifiedHTMLElement) => pairsToObject(el.attributes)
 
 const createHtmlElement = (el: SimplifiedHTMLElement , index: number) => {
-  const { type, innerHTML } : { type: string, innerHTML: string } = el
-  return React.createElement(type, {
+  return React.createElement(el.type, {
     key: index,
     ... createAttributesObject(el),
-    ... innerHTML.length > 0 ? { dangerouslySetInnerHTML: { __html: innerHTML } } : {},
+    ... el.innerHTML.length > 0 ? { dangerouslySetInnerHTML: { __html: el.innerHTML } } : {},
   })
 }
 
