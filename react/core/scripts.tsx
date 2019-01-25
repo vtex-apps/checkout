@@ -8,7 +8,6 @@ const extensionLoaderScript = '\n\
       global.vtex.renderLoader = {\n\
         render: function(extension, element, props = {}) {\n\
           const runtime = global[`__RENDER_${global.__RUNTIME__.renderMajor}_RUNTIME__`];\n\
-          console.log("BORA RENDERIZAR!!!")\n\
           runtime.renderExtension(extension, element, props)\n\
         },\n\
         update: function() {\n\
@@ -19,16 +18,6 @@ const extensionLoaderScript = '\n\
   })(this)\n\
 '
 
-const changeLangScript = (lang: string) => {
-  return `\n\
-    (function() {\n\
-      var htmlDomNode = document.getElementsByTagName('html')[0];\n\
-      htmlDomNode.setAttribute('lang', '${lang}')\n\
-    })()\n\
-  `
-}
-
 export {
-  changeLangScript,
   extensionLoaderScript
 }
