@@ -81,7 +81,6 @@ class HtmlPageBuilder {
       return reactEl.type !== 'script' || (reactEl.props.src ? !reactEl.props.src.includes('render-extension-loader.js') : true)
     })
 
-    console.log('Head', elementsToAdd)
     return (
       <Helmet>
         <html lang={`${this.language}`}></html>
