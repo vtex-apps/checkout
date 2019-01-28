@@ -59,7 +59,7 @@ class HtmlPageBuilder {
   public getBody() {
     return (
       <Fragment>
-        <div dangerouslySetInnerHTML={{__html: this.body}}></div>
+        <div dangerouslySetInnerHTML={ { __html: this.body } } />
         { this.getBodyScripts() }
       </Fragment>
     )
