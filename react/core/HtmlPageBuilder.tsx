@@ -5,8 +5,8 @@ import { Helmet } from 'render'
 import { extensionLoaderScript } from './scripts'
 
 interface ScriptToReplace {
-  shouldReplace: (el: SimplifiedHTMLElement) => boolean,
-  replacer: (el: SimplifiedHTMLElement) => SimplifiedHTMLElement
+  shouldReplace: (el: HTMLElementSimplified) => boolean,
+  replacer: (el: HTMLElementSimplified) => HTMLElementSimplified
 }
 
 const pairsToObject = (arr : Pair[]) => {
@@ -18,9 +18,9 @@ const pairsToObject = (arr : Pair[]) => {
   }, {}, arr) as any
 }
 
-const createAttributesObject = (el: SimplifiedHTMLElement) => pairsToObject(el.attributes)
+const createAttributesObject = (el: HTMLElementSimplified) => pairsToObject(el.attributes)
 
-const createHtmlElement = (el: SimplifiedHTMLElement , index: number) => {
+const createHtmlElement = (el: HTMLElementSimplified , index: number) => {
   return React.createElement(el.type, {
     key: index,
     ... createAttributesObject(el),
@@ -28,7 +28,7 @@ const createHtmlElement = (el: SimplifiedHTMLElement , index: number) => {
   })
 }
 
-const forceToWaitDOMContentLoaded = (el: SimplifiedHTMLElement): SimplifiedHTMLElement => {
+const forceToWaitDOMContentLoaded = (el: HTMLElementSimplified): HTMLElementSimplified => {
   const innerHTML = `\ndocument.addEventListener("DOMContentLoaded", function() {\n\
     ${el.innerHTML}
   });\n`
@@ -38,7 +38,7 @@ const forceToWaitDOMContentLoaded = (el: SimplifiedHTMLElement): SimplifiedHTMLE
   }
 }
 
-const withDefer = (el: SimplifiedHTMLElement): SimplifiedHTMLElement => {
+const withDefer = (el: HTMLElementSimplified): HTMLElementSimplified => {
   return (el.innerHTML.length > 0) ? el : { ...el, attributes: R.append({key: 'defer', value: true}, el.attributes)}
 }
 
@@ -46,14 +46,14 @@ class HtmlPageBuilder {
 
   private language: string
   private body: string
-  private bodyScripts: SimplifiedHTMLElement[]
-  private head: SimplifiedHTMLElement[]
+  private bodyScripts: HTMLElementSimplified[]
+  private head: HTMLElementSimplified[]
 
-  constructor(dissectedPage: DissectedPage) {
-    this.body = dissectedPage.body
-    this.bodyScripts = dissectedPage.bodyScripts
-    this.head = dissectedPage.head
-    this.language = dissectedPage.language
+  constructor(simplifiedHTML: SimplifiedHTML) {
+    this.body = simplifiedHTML.body
+    this.bodyScripts = simplifiedHTML.bodyScripts
+    this.head = simplifiedHTML.head
+    this.language = simplifiedHTML.language
   }
 
   public getBody() {
@@ -66,7 +66,7 @@ class HtmlPageBuilder {
   }
 
   public getHelmetHead() {
-    const headElements = this.head.map((el: SimplifiedHTMLElement, id: number) => {
+    const headElements = this.head.map((el: HTMLElementSimplified, id: number) => {
       return React.createElement(
         el.type,
         {key: `head#${id}`, ... createAttributesObject(el) },
@@ -90,28 +90,28 @@ class HtmlPageBuilder {
 
     const scriptsToReplace: ScriptToReplace[] = [
       {
-        replacer: (el: SimplifiedHTMLElement) => ({ ...el, innerHTML: extensionLoaderScript}),
-        shouldReplace: (el: SimplifiedHTMLElement) => {
+        replacer: (el: HTMLElementSimplified) => ({ ...el, innerHTML: extensionLoaderScript}),
+        shouldReplace: (el: HTMLElementSimplified) => {
           const attrs = pairsToObject(el.attributes)
           return attrs['data-render-loader-script'] && attrs['data-render-loader-script'] === 'true'
         },
       },
       {
         replacer: forceToWaitDOMContentLoaded,
-        shouldReplace: (el: SimplifiedHTMLElement) => {
+        shouldReplace: (el: HTMLElementSimplified) => {
           return el.innerHTML.includes('vtexid')
         },
       },
     ]
 
-    const correctedBodyScripts = R.map((el: SimplifiedHTMLElement) => {
+    const correctedBodyScripts = R.map((el: HTMLElementSimplified) => {
       const firstSatisfiedReplaceOption = R.find((candidate: ScriptToReplace) => {
         return candidate.shouldReplace(el)
       }, scriptsToReplace)
       return firstSatisfiedReplaceOption ? firstSatisfiedReplaceOption.replacer(el) : el
     }, this.bodyScripts)
 
-    return correctedBodyScripts.map((el: SimplifiedHTMLElement, index: number) => {
+    return correctedBodyScripts.map((el: HTMLElementSimplified, index: number) => {
       return createHtmlElement(withDefer(el), index)
     })
 
