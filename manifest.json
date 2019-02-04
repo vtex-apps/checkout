@@ -11,9 +11,8 @@
   ],
   "settingsSchema": {},
   "builders": {
-    "pages": "0.x",
-    "react": "2.x",
-    "node": "3.x"
+    "react": "3.x",
+    "store": "0.x"
   },
   "dependencies": {
     "vtex.render-checkout-graphql": "0.x"
