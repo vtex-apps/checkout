@@ -1,6 +1,6 @@
 import * as R from 'ramda'
 import React, { Fragment } from 'react'
-import { Helmet } from 'render'
+import { Helmet } from 'vtex.render-runtime'
 
 import { extensionLoaderScript } from './scripts'
 
