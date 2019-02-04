@@ -1,5 +1,5 @@
-query CheckoutHtml($major: Int, $environment: String, $utm: UTM) {
-  checkoutHtml(major: $major, environment: $environment, utm: $utm) {
+query CheckoutHtml($environment: String, $utm: UTM) {
+  checkoutHtml(environment: $environment, utm: $utm) {
     head {
       type,
       innerHTML,

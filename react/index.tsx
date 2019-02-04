@@ -28,7 +28,7 @@ class Checkout extends Component {
 
   public render () {
     return (
-        <Query query={CheckoutHtml} variables={ {major: 5, environment: 'stable', utm: this.utm } }>
+        <Query query={CheckoutHtml} variables={ { environment: 'stable', utm: this.utm } }>
           {({ loading, error, data}) => {
             if(loading || error) {
               return ''
