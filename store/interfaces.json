@@ -1,5 +1,8 @@
 {
   "checkout-app": {
     "component": "index"
+  },
+  "scoped-tachyons-class-adder": {
+    "component": "ScopedTachyonsClassAdder"
   }
 }

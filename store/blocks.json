@@ -1,0 +1,10 @@
+{
+  "scoped-tachyons-class-adder": {
+    "props": {
+      "selectors": [
+        "footer",
+        "[class*=header]"
+      ]
+    }
+  }
+}
