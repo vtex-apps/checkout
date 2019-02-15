@@ -1,5 +1,5 @@
-query CheckoutHtml($environment: String, $utm: UTM) {
-  checkoutHtml(environment: $environment, utm: $utm) {
+query CheckoutHtml($isDreamstore: Boolean!, $environment: String!, $utm: UTM!) {
+  checkoutHtml(isDreamstore: $isDreamstore, environment: $environment, utm: $utm) {
     head {
       type,
       innerHTML,

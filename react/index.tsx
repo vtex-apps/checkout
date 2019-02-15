@@ -7,34 +7,42 @@ import CheckoutHtml from './queries/CheckoutHtml.graphql'
 const getUtm = (props: any): UTM => {
   const { query } = props
   return {
-    campaign: query.utm_campaign || null,
-    medium: query.utm_medium || null,
-    source: query.utm_source || null,
+    campaign: query.utm_campaign || '',
+    medium: query.utm_medium || '',
+    source: query.utm_source || '',
   }
 }
 
 class Checkout extends Component {
 
   private utm: UTM
+  private isDreamstore: boolean
 
   constructor(props: any) {
     super(props)
     this.utm = getUtm(props)
+    console.log(props)
+    this.isDreamstore = props.page === 'store.checkout'
   }
 
   public shouldComponentUpdate() {
     return false
   }
 
+  public componentDidMount() {
+    window.$('.checkout-app').addClass(
+      window.location.host.replace(/\./g, '-')
+    )
+  }
+
   public render () {
     return (
-        <Query query={CheckoutHtml} variables={ { environment: 'stable', utm: this.utm } }>
+        <Query query={CheckoutHtml} variables={ { isDreamstore: this.isDreamstore, environment: 'stable', utm: this.utm } }>
           {({ loading, error, data}) => {
             if(loading || error) {
               return ''
             }
-
-            const htmlPageBuilder = new HtmlPageBuilder(data.checkoutHtml)
+            const htmlPageBuilder = new HtmlPageBuilder(data.checkoutHtml, this.isDreamstore)
             return (
               <Fragment>
                 { htmlPageBuilder.getHelmetHead() }
