@@ -33,6 +33,37 @@ const changeRenderExtensionsKeys = '\n\
   })(this);\n\
 '
 
+const deleteTachyons = `
+  document.addEventListener('DOMContentLoaded', function() {
+    const deleteElem = (el) => {
+      if(!el.id || el.id != 'scoped-tachyons') {
+        el.parentNode.removeChild(el);
+      }
+    }
+    const tachyons = document.querySelectorAll("[href*=styles-graphql]");
+    const tachyons2 = document.querySelectorAll("[href*=vtex-tachyons]");
+    tachyons2.forEach((el) => {
+      deleteElem(el);
+    });
+    tachyons.forEach((el) => {
+      deleteElem(el)
+    });
+  });
+`
+
+const addTachyonsScoped = `
+  (function() {
+    const tachyons = document.querySelectorAll("[href*=styles-graphql]");
+    const link = document.createElement("link");
+    link.type = "text/css";
+    link.rel = "stylesheet";
+    link.href = tachyons[0].href + '&namespace=scoped-tachyons';
+    link.id = "scoped-tachyons"
+    document.head.appendChild(link);
+  })()
+`
+
+
 const extensionLoaderScript = (
   createRenderLoaderPromise
   + defineRenderRuntimeAndRenderLoader
@@ -41,4 +72,6 @@ const extensionLoaderScript = (
 
 export {
   extensionLoaderScript,
+  addTachyonsScoped,
+  deleteTachyons
 }

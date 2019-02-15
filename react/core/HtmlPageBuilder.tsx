@@ -1,8 +1,7 @@
 import * as R from 'ramda'
-import React, { Fragment } from 'react'
+import React from 'react'
 import { Helmet } from 'vtex.render-runtime'
-
-import { extensionLoaderScript } from './scripts'
+import { extensionLoaderScript, deleteTachyons, addTachyonsScoped } from './scripts'
 
 interface ScriptToReplace {
   shouldReplace: (el: HTMLElementSimplified) => boolean,
@@ -49,7 +48,7 @@ class HtmlPageBuilder {
   private bodyScripts: HTMLElementSimplified[]
   private head: HTMLElementSimplified[]
 
-  constructor(simplifiedHTML: SimplifiedHTML) {
+  constructor(simplifiedHTML: SimplifiedHTML, isDreamstore: boolean) {
     this.body = simplifiedHTML.body
     this.bodyScripts = simplifiedHTML.bodyScripts
     this.head = simplifiedHTML.head
@@ -58,10 +57,11 @@ class HtmlPageBuilder {
 
   public getBody() {
     return (
-      <Fragment>
+      <div className="checkout-app">
+        <script dangerouslySetInnerHTML={ { __html: deleteTachyons } }/>
         <div dangerouslySetInnerHTML={ { __html: this.body } } />
         { this.getBodyScripts() }
-      </Fragment>
+      </div>
     )
   }
 
@@ -78,9 +78,11 @@ class HtmlPageBuilder {
       return reactEl.type !== 'script' || (reactEl.props.src ? !reactEl.props.src.includes('render-extension-loader.js') : true)
     })
 
+    console.log(`LANGUAGE ${this.language}`)
     return (
       <Helmet>
-        <html lang={`${this.language}`}></html>
+        <html lang={this.language}></html>
+        <script type="text/javascript">{addTachyonsScoped}</script>
         { elementsToAdd }
       </Helmet>
     )
