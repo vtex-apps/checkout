@@ -2,7 +2,6 @@ import React, { Component, Fragment } from 'react'
 
 const addScopedTachyonsClass = (querySelector: string) => {
     const el = document.querySelector(`${querySelector}`)
-    console.log("CLIENT", el)
     if(el) {
       el.classList.add('scoped-tachyons')
     }
