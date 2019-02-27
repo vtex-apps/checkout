@@ -1,0 +1,5 @@
+{
+  "store.checkout": {
+    "path": "/checkout-app"
+  }
+}
