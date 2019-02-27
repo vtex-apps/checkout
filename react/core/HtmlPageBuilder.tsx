@@ -1,7 +1,7 @@
 import * as R from 'ramda'
 import React from 'react'
 import { Helmet } from 'vtex.render-runtime'
-import { extensionLoaderScript, deleteTachyons, addTachyonsScoped } from './scripts'
+import { addTachyonsScoped, deleteTachyons, extensionLoaderScript } from './scripts'
 
 interface ScriptToReplace {
   shouldReplace: (el: HTMLElementSimplified) => boolean,
@@ -19,7 +19,7 @@ const pairsToObject = (arr : Pair[]) => {
 
 const createAttributesObject = (el: HTMLElementSimplified) => pairsToObject(el.attributes)
 
-const createHtmlElement = (el: HTMLElementSimplified , index: number) => {
+const createReactHtmlElement = (el: HTMLElementSimplified , index: number) => {
   return React.createElement(el.type, {
     key: index,
     ... createAttributesObject(el),
@@ -48,7 +48,7 @@ class HtmlPageBuilder {
   private bodyScripts: HTMLElementSimplified[]
   private head: HTMLElementSimplified[]
 
-  constructor(simplifiedHTML: SimplifiedHTML, isDreamstore: boolean) {
+  constructor(simplifiedHTML: SimplifiedHTML) {
     this.body = simplifiedHTML.body
     this.bodyScripts = simplifiedHTML.bodyScripts
     this.head = simplifiedHTML.head
@@ -78,7 +78,6 @@ class HtmlPageBuilder {
       return reactEl.type !== 'script' || (reactEl.props.src ? !reactEl.props.src.includes('render-extension-loader.js') : true)
     })
 
-    console.log(`LANGUAGE ${this.language}`)
     return (
       <Helmet>
         <html lang={this.language}></html>
@@ -89,7 +88,6 @@ class HtmlPageBuilder {
   }
 
   public getBodyScripts() {
-
     const scriptsToReplace: ScriptToReplace[] = [
       {
         replacer: (el: HTMLElementSimplified) => ({ ...el, innerHTML: extensionLoaderScript}),
@@ -114,9 +112,8 @@ class HtmlPageBuilder {
     }, this.bodyScripts)
 
     return correctedBodyScripts.map((el: HTMLElementSimplified, index: number) => {
-      return createHtmlElement(withDefer(el), index)
+      return createReactHtmlElement(withDefer(el), index)
     })
-
   }
 }
 
