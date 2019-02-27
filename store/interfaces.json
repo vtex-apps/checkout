@@ -1,8 +1,27 @@
 {
+  "store.checkout": {
+    "before": [
+      "header"
+    ],
+    "required": [
+      "checkout-app"
+    ],
+    "after": [
+      "footer",
+      "scoped-tachyons-class-adder"
+    ]
+  },
   "checkout-app": {
-    "component": "index"
+    "component": "index",
+    "required": [
+      "checkout-buttons",
+      "checkout-cartman"
+    ]
   },
   "scoped-tachyons-class-adder": {
     "component": "ScopedTachyonsClassAdder"
+  },
+  "checkout-buttons": {
+    "component": "vtex.render-runtime/ExtensionContainer"
   }
 }
