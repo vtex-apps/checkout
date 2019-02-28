@@ -15,7 +15,9 @@
     "component": "index",
     "required": [
       "checkout-buttons",
-      "checkout-cartman"
+      "checkout-cartman",
+      "checkout-shipping",
+      "checkout-freight-simulation"
     ]
   },
   "scoped-tachyons-class-adder": {
