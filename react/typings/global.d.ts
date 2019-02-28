@@ -26,4 +26,7 @@ declare global {
     value: any
   }
 
+  interface Window extends Window {
+    $: any
+  }
 }
