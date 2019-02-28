@@ -17,7 +17,9 @@
   "dependencies": {
     "vtex.store": "2.x",
     "vtex.render-checkout-graphql": "0.x",
-    "vtex.cartman": "1.x"
+    "vtex.cartman": "1.x",
+    "vtex.omnishipping": "2.x",
+    "vtex.shipping-preview": "1.x"
   },
   "scripts": {
     "prereleasy": "bash lint.sh",
