@@ -3,12 +3,6 @@ const createRenderLoaderPromise = `\n\
     global.vtex.renderLoaderPromise = new Promise(function(resolve, reject) {\n\
       document.addEventListener("DOMContentLoaded", resolve);\n\
     });\n\
-    // global.vtex.renderLoaderPromise = {\n\
-    //   functionsToExecute: [],\n\
-    //   then: function(func) {\n\
-    //     this.functionsToExecute.push(func)\n\
-    //   }\n\
-    // };\n\
   })(this);\n\
 `
 
