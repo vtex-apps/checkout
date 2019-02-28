@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 
 const addScopedTachyonsClass = (querySelector: string) => {
     const el = document.querySelector(`${querySelector}`)
