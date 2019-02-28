@@ -16,7 +16,11 @@ const addScopedTachyonsClassSSR = (querySelector: string) => `
   })()
 `
 
-class ScopedTachyonsClassAdder extends Component {
+interface Props {
+  selectors: string[],
+}
+
+class ScopedTachyonsClassAdder extends Component<Props> {
 
   public componentDidMount() {
     this.props.selectors.forEach(selector => {
@@ -25,15 +29,8 @@ class ScopedTachyonsClassAdder extends Component {
   }
 
   public render() {
-    return (
-      <Fragment>
-        {
-          this.props.selectors.map((selector, id) =>
-            <script key={id} dangerouslySetInnerHTML={ { __html: addScopedTachyonsClassSSR(selector) } }/>
-          )
-        }
-      </Fragment>
-
+    return this.props.selectors.map((selector, id) =>
+      <script key={id} dangerouslySetInnerHTML={ { __html: addScopedTachyonsClassSSR(selector) } }/>
     )
   }
 }
