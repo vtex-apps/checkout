@@ -47,7 +47,7 @@ class Checkout extends Component<Props> {
 
   public render() {
     return (
-        <Query query={CheckoutHtml} variables={ { isDreamstore: this.isDreamstore, environment: 'stable', utm: this.utm } }>
+        <Query query={CheckoutHtml} variables={ { isDreamstore: this.isDreamstore, environment: 'beta', utm: this.utm } }>
           {({ loading, error, data}) => {
             if(loading || error) {
               return ''
