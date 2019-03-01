@@ -29,7 +29,7 @@ The `getBody` function is responsible for building the renderable part of the ap
 ```
 
 The body from checkout's HTML is inserted in via `dangerouslySetInnerHTML`. Right before it a script is inserted for deleting
-the unscoped tachyons inserted by the `render-server`. After them all body scripts present in the original checkout html are
+the unscoped Tachyons inserted by the `render-server`. After them all body scripts present in the original checkout HTML are
 inserted. 
 
 Some notes about these body scripts is that a `defer` prop is added to all of them. Besides this, in the function `getBodyScripts`
