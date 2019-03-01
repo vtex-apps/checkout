@@ -47,7 +47,7 @@ the inline javascript code is being wrapped by a `DOMContentLoaded` event listen
 
 ## Known Issues
 
-- A fully scoped tachyons is not playing well with checkout's bootstrap. A solution to this would be to just scope tachyons' globally applied properties.
+- A fully scoped Tachyons is not playing well with checkout's Bootstrap. A solution to this would be to just scope Tachyons' globally applied properties.
 A [feature request](https://github.com/vtex/tachyons-generator/issues/20) was opened on tachyons-generator to take care of this issue. After this, a minor change on `styles-graphql` would be needed too.
 - Navigating to another page by clicking on the logo doesn't reload original tachyons, messing up the page style.
 - `TypeError: window.$ is not a function`. Sometimes jquery doesn't load for some reason.
