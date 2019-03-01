@@ -80,7 +80,6 @@ class HtmlPageBuilder {
 
     return (
       <Helmet>
-        <html lang={this.language}></html>
         <script type="text/javascript">{addTachyonsScoped}</script>
         { elementsToAdd }
       </Helmet>
