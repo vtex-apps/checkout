@@ -37,7 +37,7 @@ some scripts are replaced. At the moment the scripts replaced are:
 
 - **render-loader-script**: This inline script originally depends on `render-extension-loader`. It defines an interface for `checkout.min.js` to use.
 The defined interface creates a promise, the `global.vtex.renderLoaderPromise` and after this promise is resolved, defines `global.vtex.renderLoader`
-which is responsible for adding extension points into the current page html elements. The replacer for this script defines the `renderLoaderPromise`,
+which is responsible for adding extension points into the current page HTML elements. The replacer for this script defines the `renderLoaderPromise`,
 which resolves on `DOMContentLoaded`, and then defines `global.vtex.renderLoader`. The function `global.vtex.renderLoader.render`, called by `checkout.min.js`
 to render checkout extensions, is defined as a call to render-runtime's `renderExtension` function, which creates a `reactPortal` rendering the `ExtensionPoint` into
 the desired HTML element.
