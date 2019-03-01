@@ -22,7 +22,6 @@
     "vtex.shipping-preview": "1.x"
   },
   "scripts": {
-    "prereleasy": "bash lint.sh",
     "postreleasy": "vtex publish --public --verbose"
   },
   "policies": [
