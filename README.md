@@ -28,7 +28,7 @@ The `getBody` function is responsible for building the renderable part of the ap
 </div>
 ```
 
-The body from checkout's html is inserted in via `dangerouslySetInnerHTML`. Right before it a script is inserted for deleting
+The body from checkout's HTML is inserted in via `dangerouslySetInnerHTML`. Right before it a script is inserted for deleting
 the unscoped tachyons inserted by the `render-server`. After them all body scripts present in the original checkout html are
 inserted. 
 
