@@ -1,5 +1,5 @@
-declare module 'colossus' {
-  import {Context as KoaContext} from 'koa'
+declare module "colossus" {
+  import { Context as KoaContext } from "koa"
 
   export interface IOContext {
     account: string
@@ -21,13 +21,13 @@ declare module 'colossus' {
 interface CheckoutSettings {
   paymentConfiguration: {
     requiresAuthenticationForPreAuthorizedPaymentOption: boolean
-  },
+  }
   taxConfiguration: {
     url: string
     authorizationHeader: string
     allowExecutionAfterErrors: boolean
     integratedAuthentication: boolean
-  },
+  }
   minimumQuantityAccumulatedForItems: number
   decimalDigitsPrecision: number
   minimumValueAccumulated: number
