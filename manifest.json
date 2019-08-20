@@ -1,19 +1,26 @@
 {
-  "name": "checkout",
   "vendor": "vtex",
-  "version": "0.5.0",
-  "title": "VTEX Checkout",
-  "description": "VTEX Checkout",
-  "mustUpdateAt": "2019-01-31",
-  "categories": [],
-  "registries": [
-    "smartcheckout"
-  ],
-  "settingsSchema": {},
+  "name": "checkout",
+  "version": "1.0.0",
+  "title": "Checkout UI",
+  "description": "Checkout UI for the Store Framework",
+  "defaultLocale": "pt-BR",
+  "registries": ["smartcheckout"],
   "builders": {
-    "pages": "0.x",
-    "react": "2.x",
-    "node": "3.x"
+    "messages": "1.x",
+    "store": "0.x",
+    "react": "3.x",
+    "node": "4.x"
+  },
+  "mustUpdateAt": "2019-04-02",
+  "dependencies": {
+    "vtex.store-header": "2.x",
+    "vtex.pixel-interfaces": "1.x",
+    "vtex.pixel-manager": "1.x",
+    "vtex.styleguide": "9.x",
+    "vtex.store-footer": "2.x",
+    "vtex.store": "2.x",
+    "vtex.checkout-cart": "0.x"
   },
   "scripts": {
     "prereleasy": "bash lint.sh",
@@ -23,5 +30,6 @@
     {
       "name": "read-workspace-apps"
     }
-  ]
+  ],
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
 }

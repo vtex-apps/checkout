@@ -1,0 +1,20 @@
+{
+  "store.checkout": {
+    "allowConditions": true,
+    "component": "*",
+    "before": ["header.full"],
+    "after": ["footer", "pixels"],
+    "preview": {
+      "type": "transparent",
+      "height": 600
+    }
+  },
+  "store.checkout.cart": {
+    "around": ["homeWrapper"],
+    "allowed": ["checkout-cart"],
+    "preview": {
+      "type": "box",
+      "height": 1400
+    }
+  }
+}
