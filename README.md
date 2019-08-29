@@ -3,9 +3,8 @@
 ## Orchestrators
 ```
 store
-└── order-manager
+└── order-manager (contains order-queue and order-form)
     ├── order-items
-    ├── order-summary
     ├── order-shipping
     ├── order-profile
     └── order-payment
@@ -16,12 +15,12 @@ store
 checkout-graphql
  |
  ▼
-checkout (order-manager)
-└── checkout-cart
-    ├── product-list (order-items)
-    ├── checkout-summary (order-summary)
-    |   └── checkout-coupon
-    └── shipping-calculator (order-shipping)
+checkout
+└── checkout-cart (provides order-queue, order-form)
+    ├── product-list (controlled by order-items)
+    ├── checkout-summary
+    |   └── checkout-coupon (controlled by order-coupon)
+    └── shipping-calculator (controlled by order-shipping)
         └── address-form
 
 ... to be continued
@@ -31,6 +30,7 @@ checkout (order-manager)
 
 - [shipping-estimate-translator](https://github.com/vtex-apps/shipping-estimate-translator)
 - [format-currency](https://github.com/vtex-apps/format-currency)
+- [price](https://github.com/vtex-apps/price)
 
 ## Orchestrators
 - [order-manager](https://github.com/vtex-apps/order-manager)
