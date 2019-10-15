@@ -3,9 +3,8 @@
 ## Orchestrators
 ```
 store
-└── order-manager
+└── order-manager (contains order-queue and order-form)
     ├── order-items
-    ├── order-summary
     ├── order-shipping
     ├── order-profile
     └── order-payment
@@ -16,21 +15,26 @@ store
 checkout-graphql
  |
  ▼
-checkout (order-manager)
-└── checkout-cart
-    ├── product-list (order-items)
-    ├── checkout-summary (order-summary)
-    |   └── checkout-coupon
-    └── shipping-calculator (order-shipping)
+checkout
+└── checkout-cart (provides order-queue, order-form)
+    ├── product-list (controlled by order-items)
+    ├── checkout-summary
+    |   └── checkout-coupon (controlled by order-coupon)
+    └── shipping-calculator (controlled by order-shipping)
         └── address-form
 
 ... to be continued
 ```
 
+## GraphQL operations
+All GraphQL queries and mutations used by Checkout IO are located in [`checkout-resources`](https://github.com/vtex-apps/checkout-resources). This makes it possible to reuse GraphQL fragments and avoid duplicating the response for each query/mutation.
+
 ## Dependencies
 
 - [shipping-estimate-translator](https://github.com/vtex-apps/shipping-estimate-translator)
 - [format-currency](https://github.com/vtex-apps/format-currency)
+- [price](https://github.com/vtex-apps/price)
+- [checkout-resources](https://github.com/vtex-apps/checkout-resources)
 
 ## Orchestrators
 - [order-manager](https://github.com/vtex-apps/order-manager)
