@@ -5,9 +5,7 @@
   "title": "Checkout UI",
   "description": "Checkout UI for the Store Framework",
   "defaultLocale": "pt-BR",
-  "registries": [
-    "smartcheckout"
-  ],
+  "registries": ["smartcheckout"],
   "builders": {
     "messages": "1.x",
     "store": "0.x",
@@ -34,5 +32,10 @@
       "name": "read-workspace-apps"
     }
   ],
-  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema",
+  "settingsSchema": {
+    "title": "VTEX Checkout IO",
+    "type": "object",
+    "properties": {}
+  }
 }

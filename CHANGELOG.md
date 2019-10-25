@@ -7,8 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Added
+
+- Settings schema for checkout v6 to identify the new checkout is installed
+
 ## [1.0.1] - 2019-08-20
 
-## Changed
+### Changed
 
 - App purpose to be new checkout main app.
