@@ -1,6 +1,6 @@
 {
   "name": "vtex.checkout",
-  "version": null,
+  "version": "1.0.2",
   "dependencies": {
     "@vtex/api": "^0.38.0",
     "axios": "^0.18.0",
