@@ -1,5 +1,8 @@
 {
   "store.checkout.cart": {
     "path": "/cart/"
+  },
+  "store.checkout.cart-add": {
+    "path": "/cart/add/"
   }
 }
