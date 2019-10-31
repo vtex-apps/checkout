@@ -16,5 +16,9 @@
       "type": "box",
       "height": 1400
     }
+  },
+  "store.checkout.cart-add": {
+    "around": ["homeWrapper"],
+    "allowed": ["checkout-cart-add"]
   }
 }

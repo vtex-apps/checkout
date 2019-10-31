@@ -1,6 +1,6 @@
 import { Apps, InstanceOptions } from "@vtex/api"
 import { ColossusContext } from "colossus"
-import NodeCache from "node-cache"
+import * as NodeCache from "node-cache"
 import { keys, map, mergeAll } from "ramda"
 
 const CHECKOUT_BUILD_FILE = "dist/vtex.checkout/checkout.json"

@@ -12,7 +12,7 @@
     "messages": "1.x",
     "store": "0.x",
     "react": "3.x",
-    "node": "4.x",
+    "node": "3.x",
     "docs": "0.x"
   },
   "mustUpdateAt": "2019-04-02",
