@@ -22,7 +22,9 @@
     "vtex.styleguide": "9.x",
     "vtex.store-footer": "2.x",
     "vtex.store": "2.x",
-    "vtex.checkout-cart": "0.x"
+    "vtex.checkout-cart": "0.x",
+    "vtex.checkout-step-group": "0.x",
+    "vtex.checkout-container": "0.x"
   },
   "scripts": {
     "prereleasy": "bash lint.sh",

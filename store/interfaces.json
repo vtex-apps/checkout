@@ -20,5 +20,10 @@
   "store.checkout.cart-add": {
     "around": ["homeWrapper"],
     "allowed": ["checkout-cart-add"]
+  },
+  "store.checkout.container": {
+    "around": ["checkout-container"],
+    "composition": "children",
+    "render": "client"
   }
 }
