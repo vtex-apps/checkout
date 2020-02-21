@@ -3,13 +3,15 @@
     "types": ["node"],
     "typeRoots": ["node_modules/@types"],
     "target": "es2017",
-    "module": "commonjs",
+    "module": "es6",
     "sourceMap": false,
     "outDir": "service",
     "allowJs": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noImplicitThis": true
+    "noImplicitThis": true,
+    "moduleResolution": "node",
+    "skipLibCheck": true
   },
   "typeAcquisition": {
     "enable": false

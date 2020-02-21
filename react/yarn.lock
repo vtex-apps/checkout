@@ -5224,6 +5224,46 @@ verror@1.10.0:
     core-util-is "1.0.2"
     extsprintf "^1.2.0"
 
+"vtex.checkout-cart@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-cart@0.24.4/public/@types/vtex.checkout-cart":
+  version "0.24.4"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-cart@0.24.4/public/@types/vtex.checkout-cart#c5f63beeb2a40b4c6c48a0b24223eebf4ce95b4a"
+
+"vtex.checkout-container@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-container@0.1.0/public/@types/vtex.checkout-container":
+  version "0.1.0"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-container@0.1.0/public/@types/vtex.checkout-container#c0e6d7d422f2a830f21704ba5f2ce9326539c708"
+
+"vtex.checkout-step-group@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-step-group@0.1.0/public/@types/vtex.checkout-step-group":
+  version "0.1.0"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-step-group@0.1.0/public/@types/vtex.checkout-step-group#6ceee9cb069ecb795a2f97ce09038978e2e22a4c"
+
+"vtex.pixel-interfaces@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.pixel-interfaces@1.1.1/public/_types/react":
+  version "0.0.0"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.pixel-interfaces@1.1.1/public/_types/react#fa7a0347e046eab3dd768998fc9252b2c0dd5aef"
+
+"vtex.pixel-manager@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.pixel-manager@1.1.4/public/@types/vtex.pixel-manager":
+  version "1.1.4"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.pixel-manager@1.1.4/public/@types/vtex.pixel-manager#96907e17f4e5c584162a47dc425cb5afb2267d00"
+
+"vtex.render-runtime@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.render-runtime@8.93.0/public/@types/vtex.render-runtime":
+  version "8.93.0"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.render-runtime@8.93.0/public/@types/vtex.render-runtime#db45939964edf7c8a3adf12580901c50ad1a0c24"
+
+"vtex.store-footer@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-footer@2.19.1/public/@types/vtex.store-footer":
+  version "2.19.1"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-footer@2.19.1/public/@types/vtex.store-footer#b43b826e019b7a7f2bb41fe2f2fe779c43b9a019"
+
+"vtex.store-header@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-header@2.25.3/public/_types/react":
+  version "0.0.0"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-header@2.25.3/public/_types/react#fa7a0347e046eab3dd768998fc9252b2c0dd5aef"
+
+"vtex.store@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store@2.88.0/public/@types/vtex.store":
+  version "2.88.0"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store@2.88.0/public/@types/vtex.store#c1940a64e21ddb001116971e737c7222f976a109"
+
+"vtex.styleguide@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.styleguide@9.112.1/public/@types/vtex.styleguide":
+  version "9.112.1"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.styleguide@9.112.1/public/@types/vtex.styleguide#70b4766493bb03695fb7daf92c4b79236c9830b5"
+
 w3c-hr-time@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/w3c-hr-time/-/w3c-hr-time-1.0.1.tgz#82ac2bff63d950ea9e3189a58a65625fedf19045"
