@@ -7,7 +7,8 @@ store
     ├── order-items
     ├── order-shipping
     ├── order-profile
-    └── order-payment
+    ├── order-payment
+    └── checkout-container
 ```
 
 ## Components and data (BFF - Backend For Frontend)
@@ -17,12 +18,17 @@ checkout-graphql
  ▼
 checkout
 └── checkout-cart (provides order-queue, order-form)
-    ├── product-list (controlled by order-items)
-    ├── checkout-summary
-    |   └── checkout-coupon (controlled by order-coupon)
-    └── shipping-calculator (controlled by order-shipping)
-        └── address-form
-
+|   ├── product-list (controlled by order-items)
+|   ├── checkout-summary
+|   |   └── checkout-coupon (controlled by order-coupon)
+|   └── shipping-calculator (controlled by order-shipping)
+|       └── address-form
+|
+└── checkout-container (provides utilities used by the checkout steps)
+    └── checkout-steps
+        ├── profile-step (contains the profile form)
+        ├── shipping-step (contains the shipping form)
+        └── payment-step (contains the payment form)
 ... to be continued
 ```
 
