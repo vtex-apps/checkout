@@ -12,6 +12,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Route `/checkout` to point to the new Checkout implementation.
 - Store interface `store.checkout.container` to render the new route.
 
+### Changed
+
+- Upgrade to node builder 4.x.
+
 ## [1.1.0] - 2019-10-31
 
 ### Added
