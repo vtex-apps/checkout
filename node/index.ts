@@ -1,27 +1,20 @@
-import { Apps, InstanceOptions } from "@vtex/api"
-import { ColossusContext } from "colossus"
-import * as NodeCache from "node-cache"
-import { keys, map, mergeAll } from "ramda"
+import { Apps, Service, ServiceContext, LRUCache, Cached } from '@vtex/api'
+import { keys, map, mergeAll } from 'ramda'
 
-const CHECKOUT_BUILD_FILE = "dist/vtex.checkout/checkout.json"
+const CHECKOUT_BUILD_FILE = 'dist/vtex.checkout/checkout.json'
 const RESPONSE_CACHE_TTL = 60 * 60
-const CHECKOUT_TIMEOUT = 30 * 1000
+const APPS_TIMEOUT = 30 * 1000
 
-const checkoutMajor = process.env.VTEX_APP_VERSION!.split(".")[0]
+const [checkoutMajor] = process.env.VTEX_APP_VERSION!.split('.')
 const checkoutAppId = `vtex.checkout@${checkoutMajor}.x`
 
-const cacheStorage = new NodeCache({
+const appsCache = new LRUCache<string, Cached>({
   checkperiod: RESPONSE_CACHE_TTL,
   stdTTL: RESPONSE_CACHE_TTL,
-  useClones: false
+  useClones: false,
 })
 
-const instanceOptions: InstanceOptions = {
-  cacheStorage,
-  timeout: CHECKOUT_TIMEOUT
-}
-
-const getIdWithoutBuild = (id: string) => id.split("+build")[0]
+const getIdWithoutBuild = (id: string) => id.split('+build')[0]
 
 const notFound = <T>(fallback: T) => (error: any): T => {
   if (error.response && error.response.status === 404) {
@@ -40,8 +33,11 @@ const getCheckoutFile = (apps: Apps) => (
     .catch(notFound({}))
 }
 
-const settings = async (ctx: ColossusContext) => {
-  const apps = new Apps(ctx.vtex, instanceOptions)
+const settings = async (ctx: ServiceContext) => {
+  const {
+    clients: { apps },
+  } = ctx
+
   const dependencies = await apps.getDependencies(checkoutAppId)
   const dependenciesIds = map(getIdWithoutBuild, keys(dependencies))
   const appsSettings = await Promise.all(
@@ -55,8 +51,16 @@ const settings = async (ctx: ColossusContext) => {
   ctx.response.body = mergedSettings
 }
 
-export default {
+export default new Service({
+  clients: {
+    options: {
+      apps: {
+        timeout: APPS_TIMEOUT,
+        memoryCache: appsCache,
+      },
+    },
+  },
   routes: {
-    settings
-  }
-}
+    settings,
+  },
+})
