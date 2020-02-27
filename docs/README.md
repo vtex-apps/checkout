@@ -49,9 +49,11 @@ All GraphQL queries and mutations used by Checkout IO are located in [`checkout-
 
 ## UI components
 - [checkout](https://github.com/vtex-apps/checkout)
+- [checkout-container](https://github.com/vtex/checkout-container)
 - [checkout-cart](https://github.com/vtex-apps/checkout-cart)
 - [checkout-summary](https://github.com/vtex-apps/checkout-summary)
 - [checkout-coupon](https://github.com/vtex-apps/checkout-coupon)
+- [checkout-step-group](https://github.com/vtex-apps/checkout-step-group)
 - [product-list](https://github.com/vtex-apps/product-list)
 - [shipping-calculator](https://github.com/vtex-apps/shipping-calculator)
 
