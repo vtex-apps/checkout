@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [2.0.0] - 2020-02-27
+
 ### Added
 
 - Route `/checkout` to point to the new Checkout implementation.
