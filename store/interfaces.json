@@ -20,5 +20,18 @@
   "store.checkout.cart-add": {
     "around": ["homeWrapper"],
     "allowed": ["checkout-cart-add"]
+  },
+  "store.checkout.container": {
+    "before": ["header.full.checkout"],
+    "around": ["checkout-container"],
+    "after": ["footer.checkout"],
+    "composition": "children",
+    "render": "client"
+  },
+  "header.full.checkout": {
+    "component": "Empty"
+  },
+  "footer.checkout": {
+    "component": "Empty"
   }
 }

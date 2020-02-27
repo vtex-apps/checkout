@@ -4,5 +4,8 @@
   },
   "store.checkout.cart-add": {
     "path": "/cart/add/"
+  },
+  "store.checkout.container": {
+    "path": "/checkout"
   }
 }

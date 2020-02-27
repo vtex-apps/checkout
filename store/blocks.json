@@ -4,5 +4,8 @@
   },
   "store.checkout.cart-add": {
     "blocks": ["checkout-cart-add"]
+  },
+  "store.checkout.container": {
+    "children": ["checkout-step-group"]
   }
 }
