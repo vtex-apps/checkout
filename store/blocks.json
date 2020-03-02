@@ -9,6 +9,16 @@
     "children": ["checkout-step-group"]
   },
   "store.checkout.identification": {
-    "children": ["vtex.checkout-step-group:identification-page"]
+    "children": ["flex-layout.row#identification"]
+  },
+
+  "flex-layout.row#identification": {
+    "children": ["checkout-identification"],
+    "props": {
+      "blockClass": "identificationWrapper",
+      "preserveLayoutOnMobile": true,
+      "width": "100%",
+      "fullWidth": true
+    }
   }
 }
