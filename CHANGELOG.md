@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 
-- Route `/checkout/idenfitication` to render the new identification page.
+- Route `/checkout/identification` to render the new identification page.
 - Dependency `vtex.checkout-identification`.
 
 ## [2.0.0] - 2020-02-27
