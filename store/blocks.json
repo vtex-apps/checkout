@@ -6,7 +6,7 @@
     "blocks": ["checkout-cart-add"]
   },
   "store.checkout.container": {
-    "children": ["checkout-step-group"]
+    "children": ["flex-layout.row#container"]
   },
   "store.checkout.identification": {
     "children": ["flex-layout.row#identification"]
@@ -19,6 +19,70 @@
       "preserveLayoutOnMobile": true,
       "width": "100%",
       "fullWidth": true
+    }
+  },
+
+  "flex-layout.row#container": {
+    "children": ["flex-layout.col#checkout", "flex-layout.col#items-summary"],
+    "props": {
+      "blockClass": "checkoutContainer"
+    }
+  },
+
+  "flex-layout.col#checkout": {
+    "children": [
+      "image#logo",
+      "checkout-step-group",
+      "place-order",
+      "footer-layout#checkout"
+    ],
+    "props": {
+      "blockClass": "checkoutColumn",
+      "preventVerticalStretch": true,
+      "width": "66%"
+    }
+  },
+
+  "flex-layout.col#items-summary": {
+    "children": [],
+    "props": {
+      "blockClass": "itemsSummary"
+    }
+  },
+
+  "image#logo": {
+    "props": {
+      "src": "assets/logo.png",
+      "maxHeight": 40
+    }
+  },
+  "footer-layout#checkout": {
+    "children": ["flex-layout.col#footer"]
+  },
+
+  "flex-layout.col#footer": {
+    "children": ["divider#footer", "flex-layout.row#footer-text"],
+    "props": {
+      "blockClass": "footerContainer"
+    }
+  },
+  "divider#footer": {
+    "props": {
+      "orientation": "horizontal"
+    }
+  },
+  "flex-layout.row#footer-text": {
+    "children": ["rich-text#store-copyright", "powered-by"],
+    "props": {
+      "preventHorizontalStretch": true,
+      "blockClass": "footerText"
+    }
+  },
+  "rich-text#store-copyright": {
+    "props": {
+      "text": "Store Theme &copy; 2020",
+      "textColor": "c-muted-1",
+      "font": "t-body"
     }
   }
 }

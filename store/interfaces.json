@@ -40,5 +40,8 @@
   },
   "footer.checkout": {
     "component": "Empty"
+  },
+  "place-order": {
+    "component": "PlaceOrder"
   }
 }

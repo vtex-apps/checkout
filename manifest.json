@@ -11,6 +11,7 @@
   "builders": {
     "docs": "0.x",
     "node": "4.x",
+    "assets": "0.x",
     "react": "3.x",
     "store": "0.x",
     "styles": "2.x"
@@ -26,6 +27,8 @@
     "vtex.pixel-manager": "1.x",
     "vtex.store": "2.x",
     "vtex.store-components": "3.x",
+    "vtex.product-list": "0.x",
+    "vtex.rich-text": "0.x",
     "vtex.store-header": "2.x",
     "vtex.store-footer": "2.x",
     "vtex.styleguide": "9.x"

@@ -4,3 +4,35 @@
   align-items: center;
   justify-content: center;
 }
+
+.flexRowContent--checkoutContainer {
+  min-height: 100vh;
+  position: relative;
+}
+
+.flexRowContent--checkoutContainer::after {
+  position: absolute;
+  content: ' ';
+  display: block;
+  background: #f2f4f5;
+  left: 100%;
+  width: calc((100vw - 100%) / 2);
+  height: 100%;
+}
+
+.flexCol--checkoutColumn {
+  padding: 2rem 4rem;
+  padding-left: 0;
+}
+
+.flexColChild--checkoutColumn:last-child {
+  margin-top: auto;
+}
+
+.flexRowContent--checkoutRow {
+  min-height: 100vh;
+}
+
+.flexCol--itemsSummary {
+  background-color: #f2f4f5;
+}
