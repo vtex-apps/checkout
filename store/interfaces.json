@@ -28,6 +28,13 @@
     "composition": "children",
     "render": "client"
   },
+  "store.checkout.identification": {
+    "before": ["header.full.checkout"],
+    "around": ["checkout-container"],
+    "after": ["footer.checkout"],
+    "composition": "children",
+    "render": "client"
+  },
   "header.full.checkout": {
     "component": "Empty"
   },

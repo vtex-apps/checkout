@@ -1,6 +1,7 @@
 # VTEX Checkout
 
 ## Orchestrators
+
 ```
 store
 └── order-manager (contains order-queue and order-form)
@@ -12,6 +13,7 @@ store
 ```
 
 ## Components and data (BFF - Backend For Frontend)
+
 ```
 checkout-graphql
  |
@@ -25,6 +27,7 @@ checkout
 |       └── address-form
 |
 └── checkout-container (provides utilities used by the checkout steps)
+    ├── checkout-identification
     └── checkout-steps
         ├── profile-step (contains the profile form)
         ├── shipping-step (contains the shipping form)
@@ -51,6 +54,7 @@ All GraphQL queries and mutations used by Checkout IO are located in [`checkout-
 - [checkout](https://github.com/vtex-apps/checkout)
 - [checkout-container](https://github.com/vtex/checkout-container)
 - [checkout-cart](https://github.com/vtex-apps/checkout-cart)
+- [checkout-identification](https://github.com/vtex-apps/checkout-identification)
 - [checkout-summary](https://github.com/vtex-apps/checkout-summary)
 - [checkout-coupon](https://github.com/vtex-apps/checkout-coupon)
 - [checkout-step-group](https://github.com/vtex-apps/checkout-step-group)

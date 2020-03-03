@@ -2,14 +2,23 @@
   "compilerOptions": {
     "types": ["node"],
     "typeRoots": ["node_modules/@types"],
-    "target": "es2017",
+    "target": "es2019",
     "module": "commonjs",
     "sourceMap": false,
     "outDir": "service",
     "allowJs": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noImplicitThis": true
+    "noImplicitThis": true,
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "alwaysStrict": true,
+    "esModuleInterop": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "strictFunctionTypes": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true
   },
   "typeAcquisition": {
     "enable": false

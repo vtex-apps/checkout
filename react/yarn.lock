@@ -5224,6 +5224,58 @@ verror@1.10.0:
     core-util-is "1.0.2"
     extsprintf "^1.2.0"
 
+"vtex.checkout-cart@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-cart@0.24.4/public/@types/vtex.checkout-cart":
+  version "0.24.4"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-cart@0.24.4/public/@types/vtex.checkout-cart#c5f63beeb2a40b4c6c48a0b24223eebf4ce95b4a"
+
+"vtex.checkout-container@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-container@0.1.0/public/@types/vtex.checkout-container":
+  version "0.1.0"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-container@0.1.0/public/@types/vtex.checkout-container#c0e6d7d422f2a830f21704ba5f2ce9326539c708"
+
+"vtex.checkout-identification@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-identification@0.1.0/public/@types/vtex.checkout-identification":
+  version "0.1.0"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-identification@0.1.0/public/@types/vtex.checkout-identification#6cb1cf7a588f2e57d1164ef3f909181f8c1e544e"
+
+"vtex.checkout-step-group@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-step-group@0.2.0/public/@types/vtex.checkout-step-group":
+  version "0.2.0"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-step-group@0.2.0/public/@types/vtex.checkout-step-group#5cabeaaf2d69e837fda3b28d63ad541cf21b8e0b"
+
+"vtex.flex-layout@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.flex-layout@0.14.0/public/@types/vtex.flex-layout":
+  version "0.14.0"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.flex-layout@0.14.0/public/@types/vtex.flex-layout#6ad6fc3e73ae5b5869247dd5f446df7115c7133a"
+
+"vtex.pixel-interfaces@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.pixel-interfaces@1.1.1/public/_types/react":
+  version "0.0.0"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.pixel-interfaces@1.1.1/public/_types/react#fa7a0347e046eab3dd768998fc9252b2c0dd5aef"
+
+"vtex.pixel-manager@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.pixel-manager@1.1.4/public/@types/vtex.pixel-manager":
+  version "1.1.4"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.pixel-manager@1.1.4/public/@types/vtex.pixel-manager#96907e17f4e5c584162a47dc425cb5afb2267d00"
+
+"vtex.render-runtime@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.render-runtime@8.94.0/public/@types/vtex.render-runtime":
+  version "8.94.0"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.render-runtime@8.94.0/public/@types/vtex.render-runtime#e79eb9a66801476b66e7ed354a83a7ff1f1c72c7"
+
+"vtex.store-components@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-components@3.104.3/public/_types/react":
+  version "0.0.0"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-components@3.104.3/public/_types/react#fa7a0347e046eab3dd768998fc9252b2c0dd5aef"
+
+"vtex.store-footer@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-footer@2.19.1/public/@types/vtex.store-footer":
+  version "2.19.1"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-footer@2.19.1/public/@types/vtex.store-footer#b43b826e019b7a7f2bb41fe2f2fe779c43b9a019"
+
+"vtex.store-header@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-header@2.25.3/public/_types/react":
+  version "0.0.0"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-header@2.25.3/public/_types/react#fa7a0347e046eab3dd768998fc9252b2c0dd5aef"
+
+"vtex.store@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store@2.90.0/public/@types/vtex.store":
+  version "2.90.0"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store@2.90.0/public/@types/vtex.store#c3fb81187ec7f7ab87114169c99291511853d059"
+
+"vtex.styleguide@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.styleguide@9.112.7/public/@types/vtex.styleguide":
+  version "9.112.7"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.styleguide@9.112.7/public/@types/vtex.styleguide#882ace93cc403f2bc633b4e584d5d1dfbafaaeb0"
+
 w3c-hr-time@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/w3c-hr-time/-/w3c-hr-time-1.0.1.tgz#82ac2bff63d950ea9e3189a58a65625fedf19045"
