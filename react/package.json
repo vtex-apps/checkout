@@ -41,5 +41,5 @@
     "vtex.store-header": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-header@2.25.3/public/_types/react",
     "vtex.styleguide": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.styleguide@9.112.7/public/@types/vtex.styleguide"
   },
-  "version": "2.0.0"
+  "version": "2.1.0"
 }
