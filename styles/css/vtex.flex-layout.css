@@ -36,3 +36,7 @@
 .flexCol--itemsSummary {
   background-color: #f2f4f5;
 }
+
+.flexRowContent--footerText {
+  justify-content: space-between;
+}
