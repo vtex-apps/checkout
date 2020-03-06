@@ -1,0 +1,7 @@
+{
+  "divider#horizontal": {
+    "props": {
+      "orientation": "horizontal"
+    }
+  }
+}
