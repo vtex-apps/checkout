@@ -40,3 +40,12 @@
 .flexRowContent--footerText {
   justify-content: space-between;
 }
+
+.flexRowContent--itemsSummaryMeta {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flexRowContent--checkoutItemPriceWrapper {
+  justify-content: space-between;
+}

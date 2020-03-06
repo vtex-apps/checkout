@@ -1,3 +1,5 @@
 {
-  "store/place-order-button": "Finalizar Compra"
+  "store/place-order-button": "Finalizar Compra",
+  "store/checkout-product-count": "{quantity, plural, one {# producto} other {# productos}}",
+  "store/edit-cart-label": "Editar Carrito"
 }

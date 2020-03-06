@@ -43,5 +43,15 @@
   },
   "place-order": {
     "component": "PlaceOrder"
+  },
+  "checkout-product-list": {
+    "component": "ProductListWrapper",
+    "allowed": ["product-list"]
+  },
+  "product-counter": {
+    "component": "ProductCounter"
+  },
+  "back-to-cart-button": {
+    "component": "BackToCartButton"
   }
 }

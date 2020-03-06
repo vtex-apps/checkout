@@ -43,13 +43,6 @@
     }
   },
 
-  "flex-layout.col#items-summary": {
-    "children": [],
-    "props": {
-      "blockClass": "itemsSummary"
-    }
-  },
-
   "image#logo": {
     "props": {
       "src": "assets/logo.png",
