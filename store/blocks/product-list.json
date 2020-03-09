@@ -41,7 +41,7 @@
     }
   },
   "flex-layout.row#price.mobile": {
-    "children": ["product-quantity", "price#mobile"],
+    "children": ["product-quantity-label", "price#mobile"],
     "props": {
       "marginTop": 7,
       "preventHorizontalStretch": true,
