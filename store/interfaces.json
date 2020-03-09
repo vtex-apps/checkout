@@ -53,5 +53,9 @@
   },
   "back-to-cart-button": {
     "component": "BackToCartButton"
+  },
+  "summary-wrapper": {
+    "component": "SummaryWrapper",
+    "allowed": ["checkout-summary"]
   }
 }

@@ -4,7 +4,7 @@
       "flex-layout.row#items-meta",
       "divider#horizontal",
       "checkout-product-list",
-      "summary-wrapper#checkout"
+      "summary-wrapper"
     ],
     "props": {
       "blockClass": "itemsSummary",
@@ -21,7 +21,7 @@
       "blockClass": "itemsSummaryMeta"
     }
   },
-  "summary-wrapper#checkout": {
+  "summary-wrapper": {
     "blocks": ["checkout-summary#checkout"]
   },
   "checkout-summary#checkout": {

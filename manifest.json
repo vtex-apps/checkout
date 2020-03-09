@@ -25,6 +25,7 @@
     "vtex.checkout-summary": "0.x",
     "vtex.pixel-interfaces": "1.x",
     "vtex.pixel-manager": "1.x",
+    "vtex.order-coupon": "0.x",
     "vtex.order-manager": "0.x",
     "vtex.store": "2.x",
     "vtex.store-components": "3.x",
