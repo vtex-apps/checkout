@@ -15,7 +15,7 @@ const SummaryWrapper: React.FC = () => {
   const { insertCoupon } = useOrderCoupon()
 
   return (
-    <div className="mh8-m mh0-l pt6-m pt0-l bt b--muted-4 bn-l">
+    <div className="mh8-m mh0-l pt6 pt0-l bt b--muted-4 bn-l">
       <ExtensionPoint
         id="checkout-summary"
         // @ts-ignore
