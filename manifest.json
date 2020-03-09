@@ -31,6 +31,7 @@
     "vtex.product-list": "0.x",
     "vtex.rich-text": "0.x",
     "vtex.store-header": "2.x",
+    "vtex.responsive-layout": "0.x",
     "vtex.store-footer": "2.x",
     "vtex.styleguide": "9.x"
   },

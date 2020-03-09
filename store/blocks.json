@@ -6,7 +6,7 @@
     "blocks": ["checkout-cart-add"]
   },
   "store.checkout.container": {
-    "children": ["flex-layout.row#container"]
+    "children": ["responsive-layout.desktop#checkout"]
   },
   "store.checkout.identification": {
     "children": ["flex-layout.row#identification"]
@@ -22,31 +22,7 @@
     }
   },
 
-  "flex-layout.row#container": {
-    "children": ["flex-layout.col#checkout", "flex-layout.col#items-summary"],
-    "props": {
-      "blockClass": "checkoutContainer"
-    }
-  },
-
-  "flex-layout.col#checkout": {
-    "children": [
-      "image#logo",
-      "checkout-step-group",
-      "place-order",
-      "footer-layout#checkout"
-    ],
-    "props": {
-      "blockClass": "checkoutColumn",
-      "preventVerticalStretch": true,
-      "width": "66%"
-    }
-  },
-
-  "image#logo": {
-    "props": {
-      "src": "assets/logo.png",
-      "maxHeight": 40
-    }
+  "responsive-layout.desktop#checkout": {
+    "children": ["flex-layout.row#container-desktop"]
   }
 }

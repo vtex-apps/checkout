@@ -1,0 +1,25 @@
+{
+  "flex-layout.row#container-desktop": {
+    "children": [
+      "flex-layout.col#checkout-desktop",
+      "flex-layout.col#items-summary"
+    ],
+    "props": {
+      "blockClass": "checkoutContainer",
+      "preserveLayoutOnMobile": true
+    }
+  },
+  "flex-layout.col#checkout-desktop": {
+    "children": [
+      "image#logo",
+      "checkout-step-group",
+      "place-order",
+      "footer-layout#checkout"
+    ],
+    "props": {
+      "blockClass": "checkoutColumn",
+      "preventVerticalStretch": true,
+      "width": "66%"
+    }
+  }
+}

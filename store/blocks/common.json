@@ -3,5 +3,11 @@
     "props": {
       "orientation": "horizontal"
     }
+  },
+  "image#logo": {
+    "props": {
+      "src": "assets/logo.png",
+      "maxHeight": 40
+    }
   }
 }
