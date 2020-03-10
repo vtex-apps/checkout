@@ -5,7 +5,8 @@
   justify-content: center;
 }
 
-.flexRowContent--checkoutContainer {
+.flexRowContent--checkoutContainer,
+.flexRowContent--checkoutContainerMobile {
   min-height: 100vh;
   position: relative;
 }
@@ -25,10 +26,12 @@
   padding-left: 0;
 }
 
-.flexColChild--checkoutColumn:last-child {
+.flexColChild--checkoutColumn:last-child,
+.flexColChild--checkoutColumnMobile:last-child {
   margin-top: auto;
 }
 
+.flexCol--checkoutColumnMobile,
 .flexRowContent--checkoutRow {
   min-height: 100vh;
 }

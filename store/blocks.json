@@ -6,7 +6,10 @@
     "blocks": ["checkout-cart-add"]
   },
   "store.checkout.container": {
-    "children": ["responsive-layout.desktop#checkout"]
+    "children": [
+      "responsive-layout.desktop#checkout",
+      "responsive-layout.mobile#checkout"
+    ]
   },
   "store.checkout.identification": {
     "children": ["flex-layout.row#identification"]
@@ -24,5 +27,8 @@
 
   "responsive-layout.desktop#checkout": {
     "children": ["flex-layout.row#container-desktop"]
+  },
+  "responsive-layout.mobile#checkout": {
+    "children": ["flex-layout.row#container-mobile"]
   }
 }

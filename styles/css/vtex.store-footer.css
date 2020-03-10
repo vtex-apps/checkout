@@ -2,3 +2,9 @@
   margin-top: 1rem;
   padding-top: 1.5rem;
 }
+
+.footerLayout--checkoutFooterMobile {
+  margin: 1rem -.5rem 0;
+  padding: 1.5rem 1rem;
+  background-color: #f2f4f5;
+}
