@@ -18,7 +18,7 @@ const SummaryWrapper: React.FC = () => {
     <div className="mh8-m mh0-l pt6 pt0-l bt b--muted-4 bn-l">
       <ExtensionPoint
         id="checkout-summary"
-        // @ts-ignore
+        // @ts-ignore: 2322
         totalizers={totalizers}
         total={value}
         coupon={coupon}
