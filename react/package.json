@@ -27,7 +27,7 @@
     "apollo-client": "^2.5.1",
     "typescript": "3.8.3",
     "vtex.checkout-cart": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-cart@0.24.4/public/@types/vtex.checkout-cart",
-    "vtex.checkout-container": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-container@0.2.0/public/@types/vtex.checkout-container",
+    "vtex.checkout-container": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-container@0.3.0/public/@types/vtex.checkout-container",
     "vtex.checkout-identification": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-identification@0.1.1/public/@types/vtex.checkout-identification",
     "vtex.checkout-step-group": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-step-group@0.4.0/public/@types/vtex.checkout-step-group",
     "vtex.checkout-summary": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-summary@0.14.1/public/@types/vtex.checkout-summary",
@@ -37,13 +37,13 @@
     "vtex.pixel-interfaces": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.pixel-interfaces@1.1.1/public/_types/react",
     "vtex.pixel-manager": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.pixel-manager@1.1.4/public/@types/vtex.pixel-manager",
     "vtex.product-list": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.product-list@0.19.0/public/@types/vtex.product-list",
-    "vtex.render-runtime": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.render-runtime@8.94.0/public/@types/vtex.render-runtime",
+    "vtex.render-runtime": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.render-runtime@8.95.0/public/@types/vtex.render-runtime",
     "vtex.responsive-layout": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.responsive-layout@0.1.2/public/@types/vtex.responsive-layout",
     "vtex.rich-text": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.rich-text@0.8.2/public/@types/vtex.rich-text",
     "vtex.store": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store@2.90.2/public/@types/vtex.store",
     "vtex.store-components": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-components@3.105.1/public/_types/react",
     "vtex.store-footer": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-footer@2.19.2/public/@types/vtex.store-footer",
     "vtex.store-header": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-header@2.25.3/public/_types/react",
-    "vtex.styleguide": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.styleguide@9.112.13/public/@types/vtex.styleguide"
+    "vtex.styleguide": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.styleguide@9.112.14/public/@types/vtex.styleguide"
   }
 }
