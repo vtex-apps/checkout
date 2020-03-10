@@ -6,7 +6,7 @@
     "blocks": ["checkout-cart-add"]
   },
   "store.checkout.container": {
-    "children": ["checkout-step-group"]
+    "children": ["responsive-layout.desktop#checkout"]
   },
   "store.checkout.identification": {
     "children": ["flex-layout.row#identification"]
@@ -20,5 +20,9 @@
       "width": "100%",
       "fullWidth": true
     }
+  },
+
+  "responsive-layout.desktop#checkout": {
+    "children": ["flex-layout.row#container-desktop"]
   }
 }

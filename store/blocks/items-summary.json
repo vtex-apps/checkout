@@ -1,0 +1,39 @@
+{
+  "flex-layout.col#items-summary": {
+    "children": [
+      "flex-layout.row#items-meta",
+      "divider#horizontal",
+      "checkout-product-list",
+      "summary-wrapper"
+    ],
+    "props": {
+      "blockClass": "itemsSummary",
+      "preventVerticalStretch": true,
+      "paddingLeft": 6
+    }
+  },
+  "flex-layout.row#items-meta": {
+    "children": ["product-counter", "back-to-cart-button"],
+    "props": {
+      "paddingTop": 7,
+      "paddingBottom": 5,
+      "preventHorizontalStretch": true,
+      "blockClass": "itemsSummaryMeta"
+    }
+  },
+  "summary-wrapper": {
+    "blocks": ["checkout-summary#checkout"]
+  },
+  "checkout-summary#checkout": {
+    "children": ["flex-layout.row#summary-coupon", "summary-totalizers"],
+    "props": {
+      "blockClass": "checkout"
+    }
+  },
+  "flex-layout.row#summary-coupon": {
+    "children": ["summary-coupon"],
+    "props": {
+      "marginBottom": 6
+    }
+  }
+}

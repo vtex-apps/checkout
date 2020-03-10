@@ -49,6 +49,7 @@ All GraphQL queries and mutations used by Checkout IO are located in [`checkout-
 - [order-manager](https://github.com/vtex-apps/order-manager)
 - [order-coupon](https://github.com/vtex-apps/order-coupon)
 - [order-items](https://github.com/vtex-apps/order-items)
+- [order-profile](https://github.com/vtex-apps/order-profile)
 
 ## UI components
 - [checkout](https://github.com/vtex-apps/checkout)

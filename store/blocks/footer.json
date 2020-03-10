@@ -1,0 +1,43 @@
+{
+  "footer-layout#checkout": {
+    "children": ["flex-layout.col#footer"],
+    "props": {
+      "blockClass": "checkoutFooter"
+    }
+  },
+  "footer-layout#checkout-mobile": {
+    "children": ["flex-layout.col#footer-mobile"],
+    "props": {
+      "blockClass": "checkoutFooter"
+    }
+  },
+
+  "flex-layout.col#footer": {
+    "children": ["divider#horizontal", "flex-layout.row#footer-text"],
+    "props": {
+      "blockClass": "footerContainer"
+    }
+  },
+  "flex-layout.col#footer-mobile": {
+    "children": ["flex-layout.row#footer-text"],
+    "props": {
+      "blockClass": "footerContainer"
+    }
+  },
+
+  "flex-layout.row#footer-text": {
+    "children": ["rich-text#store-copyright", "powered-by"],
+    "props": {
+      "preventHorizontalStretch": true,
+      "blockClass": "footerText"
+    }
+  },
+  "rich-text#store-copyright": {
+    "props": {
+      "text": "Store Theme &copy; 2020",
+      "textColor": "c-muted-1",
+      "font": "t-body",
+      "blockClass": "checkoutCopyright"
+    }
+  }
+}

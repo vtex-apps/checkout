@@ -1,0 +1,5 @@
+{
+  "store/place-order-button": "Place Order",
+  "store/checkout-product-count": "{quantity, plural, one {# product} other {# products}}",
+  "store/edit-cart-label": "Edit Cart"
+}

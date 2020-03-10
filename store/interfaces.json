@@ -40,5 +40,22 @@
   },
   "footer.checkout": {
     "component": "Empty"
+  },
+  "place-order": {
+    "component": "PlaceOrder"
+  },
+  "checkout-product-list": {
+    "component": "ProductListWrapper",
+    "allowed": ["product-list"]
+  },
+  "product-counter": {
+    "component": "ProductCounter"
+  },
+  "back-to-cart-button": {
+    "component": "BackToCartButton"
+  },
+  "summary-wrapper": {
+    "component": "SummaryWrapper",
+    "allowed": ["checkout-summary"]
   }
 }

@@ -564,6 +564,21 @@ eslint-config-vtex@^12.1.1:
     eslint-plugin-prettier "^3.1.2"
     eslint-plugin-vtex "^1.0.3"
 
+eslint-config-vtex@^12.2.1:
+  version "12.2.1"
+  resolved "https://registry.yarnpkg.com/eslint-config-vtex/-/eslint-config-vtex-12.2.1.tgz#b995954240f795a0bb07450dc467430d9da03a6b"
+  integrity sha512-ueMkiSvB89enh9UrWREwsgMvV+2lZlhbLLMqUrZFyzbJ0+ulB2qzNMgFANa1Az8i/xjUtIgBuRPjL5BHwWkw3g==
+  dependencies:
+    "@typescript-eslint/eslint-plugin" "^2.17.0"
+    "@typescript-eslint/parser" "^2.17.0"
+    confusing-browser-globals "^1.0.9"
+    eslint-config-prettier "^6.9.0"
+    eslint-plugin-cypress "^2.9.0"
+    eslint-plugin-import "^2.20.0"
+    eslint-plugin-jest "^23.7.0"
+    eslint-plugin-prettier "^3.1.2"
+    eslint-plugin-vtex "^1.0.3"
+
 eslint-import-resolver-node@^0.3.2:
   version "0.3.3"
   resolved "https://registry.yarnpkg.com/eslint-import-resolver-node/-/eslint-import-resolver-node-0.3.3.tgz#dbaa52b6b2816b50bc6711af75422de808e98404"
