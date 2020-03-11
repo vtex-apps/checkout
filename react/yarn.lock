@@ -4771,9 +4771,9 @@ verror@1.10.0:
   version "0.24.4"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-cart@0.24.4/public/@types/vtex.checkout-cart#c5f63beeb2a40b4c6c48a0b24223eebf4ce95b4a"
 
-"vtex.checkout-container@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-container@0.2.0/public/@types/vtex.checkout-container":
-  version "0.2.0"
-  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-container@0.2.0/public/@types/vtex.checkout-container#0603bcc5fdb9977b4cd2600d9532a6f13b12af3e"
+"vtex.checkout-container@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-container@0.3.0/public/@types/vtex.checkout-container":
+  version "0.3.0"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-container@0.3.0/public/@types/vtex.checkout-container#0ee786ff7e0c0b28723e628f7cf0f729bbd29c88"
 
 "vtex.checkout-identification@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-identification@0.1.1/public/@types/vtex.checkout-identification":
   version "0.1.1"
@@ -4811,9 +4811,9 @@ verror@1.10.0:
   version "0.19.0"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.product-list@0.19.0/public/@types/vtex.product-list#5a0d5d0bc159d88dfc3aa7cef9515f8943b62fc2"
 
-"vtex.render-runtime@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.render-runtime@8.94.0/public/@types/vtex.render-runtime":
-  version "8.94.0"
-  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.render-runtime@8.94.0/public/@types/vtex.render-runtime#e79eb9a66801476b66e7ed354a83a7ff1f1c72c7"
+"vtex.render-runtime@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.render-runtime@8.95.0/public/@types/vtex.render-runtime":
+  version "8.95.0"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.render-runtime@8.95.0/public/@types/vtex.render-runtime#83fadce267c67a81eb99f4cc77afbd54d4c9b650"
 
 "vtex.responsive-layout@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.responsive-layout@0.1.2/public/@types/vtex.responsive-layout":
   version "0.1.2"
@@ -4839,9 +4839,9 @@ verror@1.10.0:
   version "2.90.2"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store@2.90.2/public/@types/vtex.store#7988258e70743097b38feab222fc07648c482bbd"
 
-"vtex.styleguide@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.styleguide@9.112.13/public/@types/vtex.styleguide":
-  version "9.112.13"
-  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.styleguide@9.112.13/public/@types/vtex.styleguide#625c2d44fb3cb07e7207b3efb9380134b62df62c"
+"vtex.styleguide@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.styleguide@9.112.14/public/@types/vtex.styleguide":
+  version "9.112.14"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.styleguide@9.112.14/public/@types/vtex.styleguide#3ad332c14335505fe50545af11331a2d54e681ae"
 
 w3c-hr-time@^1.0.1:
   version "1.0.1"

@@ -1461,9 +1461,9 @@ uuid@^3.1.0:
   version "0.24.4"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-cart@0.24.4/public/@types/vtex.checkout-cart#c5f63beeb2a40b4c6c48a0b24223eebf4ce95b4a"
 
-"vtex.checkout-container@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-container@0.2.0/public/@types/vtex.checkout-container":
-  version "0.2.0"
-  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-container@0.2.0/public/@types/vtex.checkout-container#0603bcc5fdb9977b4cd2600d9532a6f13b12af3e"
+"vtex.checkout-container@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-container@0.3.0/public/@types/vtex.checkout-container":
+  version "0.3.0"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-container@0.3.0/public/@types/vtex.checkout-container#0ee786ff7e0c0b28723e628f7cf0f729bbd29c88"
 
 "vtex.checkout-identification@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-identification@0.1.1/public/@types/vtex.checkout-identification":
   version "0.1.1"
@@ -1477,9 +1477,9 @@ uuid@^3.1.0:
   version "0.14.1"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-summary@0.14.1/public/@types/vtex.checkout-summary#19e78cac4ab10984b5527685b580c5160eabe42d"
 
-"vtex.checkout@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout@2.1.0/public/_types/react":
+"vtex.checkout@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout@2.2.0/public/@types/vtex.checkout":
   version "0.0.0"
-  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout@2.1.0/public/_types/react#fa7a0347e046eab3dd768998fc9252b2c0dd5aef"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout@2.2.0/public/@types/vtex.checkout#c6e0c34f23d0316cb04a163a13637118285a472b"
 
 "vtex.flex-layout@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.flex-layout@0.14.0/public/@types/vtex.flex-layout":
   version "0.14.0"
@@ -1529,9 +1529,9 @@ uuid@^3.1.0:
   version "2.90.2"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store@2.90.2/public/@types/vtex.store#7988258e70743097b38feab222fc07648c482bbd"
 
-"vtex.styleguide@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.styleguide@9.112.13/public/@types/vtex.styleguide":
-  version "9.112.13"
-  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.styleguide@9.112.13/public/@types/vtex.styleguide#625c2d44fb3cb07e7207b3efb9380134b62df62c"
+"vtex.styleguide@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.styleguide@9.112.14/public/@types/vtex.styleguide":
+  version "9.112.14"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.styleguide@9.112.14/public/@types/vtex.styleguide#3ad332c14335505fe50545af11331a2d54e681ae"
 
 wrappy@1:
   version "1.0.2"

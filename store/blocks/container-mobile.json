@@ -1,0 +1,29 @@
+{
+  "flex-layout.row#container-mobile": {
+    "children": ["flex-layout.col#checkout-mobile"],
+    "props": {
+      "blockClass": "checkoutContainerMobile",
+      "paddingTop": 6
+    }
+  },
+
+  "flex-layout.col#checkout-mobile": {
+    "children": [
+      "image#logo",
+      "checkout-step-group#checkout-mobile",
+      "summary-wrapper",
+      "place-order",
+      "footer-layout#checkout-mobile"
+    ],
+    "props": {
+      "preventVerticalStretch": true,
+      "blockClass": "checkoutColumnMobile"
+    }
+  },
+  "checkout-step-group#checkout-mobile": {
+    "children": ["profile-step", "shipping-step", "payment-step"],
+    "props": {
+      "blockClass": "checkoutMobile"
+    }
+  }
+}

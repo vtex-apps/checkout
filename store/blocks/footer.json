@@ -8,7 +8,7 @@
   "footer-layout#checkout-mobile": {
     "children": ["flex-layout.col#footer-mobile"],
     "props": {
-      "blockClass": "checkoutFooter"
+      "blockClass": "checkoutFooterMobile"
     }
   },
 
