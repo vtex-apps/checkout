@@ -9,5 +9,10 @@
       "src": "assets/logo.png",
       "maxHeight": 40
     }
+  },
+  "product-counter#simple": {
+    "props": {
+      "type": "simple"
+    }
   }
 }
