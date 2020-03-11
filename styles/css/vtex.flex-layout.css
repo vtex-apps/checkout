@@ -52,3 +52,7 @@
 .flexRowContent--checkoutItemPriceWrapper {
   justify-content: space-between;
 }
+
+.flexRowContent--checkoutMobileHeader {
+  justify-content: space-between;
+}
