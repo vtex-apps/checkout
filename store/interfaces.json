@@ -57,5 +57,8 @@
   "summary-wrapper": {
     "component": "SummaryWrapper",
     "allowed": ["checkout-summary"]
+  },
+  "view-cart-label": {
+    "component": "ViewCartLabel"
   }
 }

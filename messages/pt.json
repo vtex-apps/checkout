@@ -1,5 +1,6 @@
 {
   "store/place-order-button": "Fechar Pedido",
   "store/checkout-product-count": "{quantity, plural, one {# produto} other {# produtos}}",
-  "store/edit-cart-label": "Editar Carrinho"
+  "store/edit-cart-label": "Editar Carrinho",
+  "store/view-cart-label": "Ver Carrinho"
 }
