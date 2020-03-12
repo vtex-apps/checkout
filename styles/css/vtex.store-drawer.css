@@ -1,0 +1,26 @@
+.drawer--checkout,
+.drawerHeader--checkout {
+  background-color: #f2f4f5;
+}
+
+.drawer--checkout {
+  padding: 1.5rem 1rem;
+}
+
+@media only screen and (min-width: 40em) {
+  .drawer--checkout {
+    padding: 2rem 1.5rem;
+  }
+}
+
+.drawerHeader--checkout {
+  overflow: hidden;
+}
+
+.closeIconButton--checkoutDrawer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #727273;
+  margin: -.75rem;
+}

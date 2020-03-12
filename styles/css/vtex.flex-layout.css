@@ -38,10 +38,7 @@
 
 .flexCol--itemsSummary {
   background-color: #f2f4f5;
-}
-
-.flexRowContent--footerText {
-  justify-content: space-between;
+  height: 100%;
 }
 
 .flexRowContent--itemsSummaryMeta {
@@ -49,10 +46,23 @@
   align-items: center;
 }
 
-.flexRowContent--checkoutItemPriceWrapper {
-  justify-content: space-between;
+.flexRowContent--itemsSummaryDrawerMeta {
+  align-items: center;
+  height: 100%;
 }
 
+.flexRowContent--itemsSummaryDrawerMeta :global(.vtex-button) {
+  margin-left: .5rem;
+}
+
+.flexRow--checkoutDrawerHeader {
+  width: 100%;
+}
+
+.flexRowContent--footerText ,
+.flexRowContent--checkoutItemPriceWrapper,
+.flexRowContent--checkoutDrawerHeader,
 .flexRowContent--checkoutMobileHeader {
   justify-content: space-between;
 }
+

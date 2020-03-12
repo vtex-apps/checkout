@@ -9,7 +9,7 @@
 
   "flex-layout.col#checkout-mobile": {
     "children": [
-      "image#logo",
+      "flex-layout.row#checkout-mobile-header",
       "checkout-step-group#checkout-mobile",
       "summary-wrapper",
       "place-order",
@@ -20,6 +20,55 @@
       "blockClass": "checkoutColumnMobile"
     }
   },
+
+  "flex-layout.row#checkout-mobile-header": {
+    "children": ["image#logo", "drawer#cart-drawer"],
+    "props": {
+      "preventHorizontalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "blockClass": "checkoutMobileHeader"
+    }
+  },
+
+  "drawer#cart-drawer": {
+    "children": ["flex-layout.col#items-summary-mobile"],
+    "blocks": [
+      "drawer-trigger#checkout-drawer",
+      "drawer-header#checkout-drawer-header"
+    ],
+    "props": {
+      "slideDirection": "rightToLeft",
+      "blockClass": "checkout"
+    }
+  },
+  "drawer-trigger#checkout-drawer": {
+    "children": ["view-cart-label"]
+  },
+  "drawer-header#checkout-drawer-header": {
+    "children": ["flex-layout.row#checkout-drawer-header"],
+    "props": {
+      "blockClass": "checkout"
+    }
+  },
+  "flex-layout.row#checkout-drawer-header": {
+    "children": [
+      "flex-layout.row#drawer-items-meta",
+      "drawer-close-button#checkout-drawer"
+    ],
+    "props": {
+      "preserveLayoutOnMobile": true,
+      "preventHorizontalStretch": true,
+      "blockClass": "checkoutDrawerHeader",
+      "paddingBottom": 5
+    }
+  },
+  "drawer-close-button#checkout-drawer": {
+    "props": {
+      "size": 24,
+      "blockClass": "checkoutDrawer"
+    }
+  },
+
   "checkout-step-group#checkout-mobile": {
     "children": ["profile-step", "shipping-step", "payment-step"],
     "props": {
