@@ -8,7 +8,11 @@ const messages = defineMessages({
   },
 })
 
-const ProductCounter: React.FC = () => {
+interface Props {
+  type?: 'simple' | 'full'
+}
+
+const ProductCounter: React.FC<Props> = ({ type = 'full' }) => {
   const {
     orderForm: { items },
   } = useOrderForm()
@@ -17,10 +21,14 @@ const ProductCounter: React.FC = () => {
 
   return (
     <p className="c-muted-1 t-body b ma0">
-      <FormattedMessage
-        {...messages.productCount}
-        values={{ quantity: productCount }}
-      />
+      {type === 'full' ? (
+        <FormattedMessage
+          {...messages.productCount}
+          values={{ quantity: productCount }}
+        />
+      ) : (
+        productCount
+      )}
     </p>
   )
 }

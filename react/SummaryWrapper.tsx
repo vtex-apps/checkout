@@ -3,7 +3,11 @@ import { ExtensionPoint } from 'vtex.render-runtime'
 import { useOrderForm } from 'vtex.order-manager/OrderForm'
 import { useOrderCoupon } from 'vtex.order-coupon/OrderCoupon'
 
-const SummaryWrapper: React.FC = () => {
+interface Props {
+  lean?: boolean
+}
+
+const SummaryWrapper: React.FC<Props> = ({ lean = false }) => {
   const {
     orderForm: {
       totalizers,
@@ -15,7 +19,7 @@ const SummaryWrapper: React.FC = () => {
   const { insertCoupon } = useOrderCoupon()
 
   return (
-    <div className="mh8-m mh0-l pt6 pt0-l bt b--muted-4 bn-l">
+    <div className={lean ? '' : 'mh8-m mh0-l pt6 pt0-l bt b--muted-4 bn-l'}>
       <ExtensionPoint
         id="checkout-summary"
         blockProps={{

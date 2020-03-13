@@ -5,9 +5,7 @@
   "title": "Checkout UI",
   "description": "Checkout UI for the Store Framework",
   "defaultLocale": "pt-BR",
-  "registries": [
-    "smartcheckout"
-  ],
+  "registries": ["smartcheckout"],
   "builders": {
     "assets": "0.x",
     "docs": "0.x",
@@ -19,6 +17,7 @@
   },
   "mustUpdateAt": "2019-04-02",
   "dependencies": {
+    "vtex.css-handles": "0.x",
     "vtex.checkout-cart": "0.x",
     "vtex.checkout-identification": "0.x",
     "vtex.checkout-step-group": "0.x",
@@ -33,6 +32,7 @@
     "vtex.store-components": "3.x",
     "vtex.product-list": "0.x",
     "vtex.rich-text": "0.x",
+    "vtex.store-drawer": "0.x",
     "vtex.store-header": "2.x",
     "vtex.responsive-layout": "0.x",
     "vtex.store-footer": "2.x",

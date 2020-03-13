@@ -48,6 +48,7 @@
     "props": {
       "marginTop": 5,
       "preventHorizontalStretch": true,
+      "preserveLayoutOnMobile": true,
       "blockClass": "checkoutItemPriceWrapper"
     }
   },

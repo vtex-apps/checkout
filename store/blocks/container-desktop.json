@@ -2,7 +2,7 @@
   "flex-layout.row#container-desktop": {
     "children": [
       "flex-layout.col#checkout-desktop",
-      "flex-layout.col#items-summary"
+      "flex-layout.col#items-summary-desktop"
     ],
     "props": {
       "blockClass": "checkoutContainer",
