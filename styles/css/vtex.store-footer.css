@@ -4,7 +4,21 @@
 }
 
 .footerLayout--checkoutFooterMobile {
-  margin: 1rem -.5rem 0;
+  margin: 1rem -1rem 0;
   padding: 1.5rem 1rem;
   background-color: #f2f4f5;
+}
+
+@media only screen and (min-width: 40em) {
+  .footerLayout--checkoutFooterMobile {
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+  }
+}
+
+@media only screen and (min-width: 61em) {
+  .footerLayout--checkoutFooterMobile {
+    margin-left: calc((100% - 100vw) / 2);
+    margin-right: calc((100% - 100vw) / 2);
+  }
 }

@@ -5,8 +5,7 @@
   justify-content: center;
 }
 
-.flexRowContent--checkoutContainer,
-.flexRowContent--checkoutContainerMobile {
+.flexRowContent--checkoutContainer {
   min-height: 100vh;
   position: relative;
 }
@@ -19,6 +18,12 @@
   left: 100%;
   width: calc((100vw - 100%) / 2);
   height: 100%;
+}
+
+@media only screen and (max-width: 64em) {
+  .flexRowContent--checkoutContainer::after {
+    display: none;
+  }
 }
 
 .flexCol--checkoutColumn {
@@ -66,3 +71,58 @@
   justify-content: space-between;
 }
 
+/* Checkout Container */
+
+.flexRow--checkoutContainer {
+  margin: 0 1em;
+}
+
+/* S */
+@media screen and (min-width: 39em) and (max-width: 40em) {
+  .flexRow--checkoutContainer {
+    margin: 0 auto;
+    width: 37em;
+  }
+}
+
+/* M */
+@media screen and (min-width: 40em) and (max-width: 61em) {
+  .flexRow--checkoutContainer {
+    margin: 0 1.5em;
+  }
+}
+
+@media screen and (min-width: 61em) and (max-width: 64em) {
+  .flexRow--checkoutContainer {
+    margin: 0 auto;
+    width: 58em;
+  }
+}
+
+/* L */
+@media screen and (min-width: 64em) and (max-width: 78em) {
+  .flexRow--checkoutContainer {
+    margin: 0 3em;
+  }
+}
+
+@media screen and (min-width: 78em) and (max-width: 80em) {
+  .flexRow--checkoutContainer {
+    margin: 0 auto;
+    width: 72em;
+  }
+}
+
+/* XL */
+@media screen and (min-width: 80em) and (max-width: 104em) {
+  .flexRow--checkoutContainer {
+    margin: 0 4em;
+  }
+}
+
+@media screen and (min-width: 104em) {
+  .flexRow--checkoutContainer {
+    margin: 0 auto;
+    width: 96em;
+  }
+}

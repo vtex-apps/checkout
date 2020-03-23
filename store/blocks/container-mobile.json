@@ -2,8 +2,9 @@
   "flex-layout.row#container-mobile": {
     "children": ["flex-layout.col#checkout-mobile"],
     "props": {
-      "blockClass": "checkoutContainerMobile",
-      "paddingTop": 6
+      "blockClass": "checkoutContainer",
+      "paddingTop": 6,
+      "fullWidth": true
     }
   },
 
