@@ -6,7 +6,8 @@
     ],
     "props": {
       "blockClass": "checkoutContainer",
-      "preserveLayoutOnMobile": true
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
     }
   },
   "flex-layout.col#checkout-desktop": {
