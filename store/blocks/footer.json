@@ -26,7 +26,7 @@
   },
 
   "flex-layout.row#footer-text": {
-    "children": ["rich-text#store-copyright", "powered-by#checkout"],
+    "children": ["flex-layout.col#footer-notice", "powered-by#checkout"],
     "props": {
       "preventVerticalStretch": true,
       "preventHorizontalStretch": true,
@@ -38,12 +38,28 @@
       "blockClass": "checkout"
     }
   },
+  "flex-layout.col#footer-notice": {
+    "children": ["rich-text#store-copyright", "rich-text#store-disclaimer"],
+    "props": {
+      "preserveLayoutOnMobile": true,
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true
+    }
+  },
   "rich-text#store-copyright": {
     "props": {
       "text": "Store Theme &copy; 2020",
       "textColor": "c-muted-1",
       "font": "t-body",
       "blockClass": "checkoutCopyright"
+    }
+  },
+  "rich-text#store-disclaimer": {
+    "props": {
+      "text": "None of the items above are for sale.",
+      "textColor": "c-muted-2",
+      "font": "t-body",
+      "blockClass": "checkoutDisclaimer"
     }
   }
 }

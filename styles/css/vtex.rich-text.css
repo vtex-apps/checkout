@@ -6,3 +6,8 @@
 .container--checkoutCopyright .paragraph {
   margin: 0;
 }
+
+.container--checkoutDisclaimer .paragraph {
+  margin: 0;
+  margin-top: 1rem;
+}
