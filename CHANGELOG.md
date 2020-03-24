@@ -7,9 +7,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Added
+
+- Sales disclaimer in footer.
+
 ### Fixed
 
 - Footer alignment on mobile.
+- Alignment of open cart button in header.
 
 ## [2.4.1] - 2020-03-23
 
