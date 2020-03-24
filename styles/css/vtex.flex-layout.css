@@ -137,23 +137,9 @@
   }
 }
 
-@media screen and (min-width: 78em) and (max-width: 80em) {
+@media screen and (min-width: 78em) {
   .flexRow--checkoutContainer {
     margin: 0 auto;
     width: 72rem;
-  }
-}
-
-/* XL */
-@media screen and (min-width: 80em) and (max-width: 104em) {
-  .flexRow--checkoutContainer {
-    margin: 0 4rem;
-  }
-}
-
-@media screen and (min-width: 104em) {
-  .flexRow--checkoutContainer {
-    margin: 0 auto;
-    width: 96rem;
   }
 }
