@@ -41,9 +41,34 @@
   min-height: 100vh;
 }
 
-.flexCol--itemsSummary {
+.flexCol--itemsSummary,
+.flexCol--itemsSummaryMobile {
   background-color: #f2f4f5;
   height: 100%;
+}
+
+.flexCol--itemsSummary {
+  padding-left: 1rem;
+  padding-top: 1.5rem;
+}
+
+@media only screen and (min-width: 40em) {
+  .flexCol--itemsSummary {
+    padding-left: 1.5rem;
+    padding-top: 2rem;
+  }
+}
+
+@media only screen and (min-width: 64em) {
+  .flexCol--itemsSummary {
+    padding-left: 3rem;
+  }
+}
+
+@media only screen and (min-width: 80em) {
+  .flexCol--itemsSummary {
+    padding-left: 4rem;
+  }
 }
 
 .flexRowContent--itemsSummaryMeta {

@@ -8,8 +8,7 @@
     ],
     "props": {
       "blockClass": "itemsSummary",
-      "preventVerticalStretch": true,
-      "paddingLeft": 6
+      "preventVerticalStretch": true
     }
   },
   "flex-layout.col#items-summary-mobile": {
@@ -19,14 +18,13 @@
       "summary-wrapper#drawer"
     ],
     "props": {
-      "blockClass": "itemsSummary",
+      "blockClass": "itemsSummaryMobile",
       "preventVerticalStretch": true
     }
   },
   "flex-layout.row#items-meta": {
     "children": ["product-counter", "back-to-cart-button"],
     "props": {
-      "paddingTop": 7,
       "paddingBottom": 5,
       "preventHorizontalStretch": true,
       "preserveLayoutOnMobile": true,
