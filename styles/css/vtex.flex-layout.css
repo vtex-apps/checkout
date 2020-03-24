@@ -71,6 +71,12 @@
   justify-content: space-between;
 }
 
+@media screen and (min-width: 64em) {
+  .flexRow--footerText {
+    margin-top: 1rem;
+  }
+}
+
 /* Checkout Container */
 
 .flexRow--checkoutContainer {

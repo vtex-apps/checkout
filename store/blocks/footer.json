@@ -26,10 +26,16 @@
   },
 
   "flex-layout.row#footer-text": {
-    "children": ["rich-text#store-copyright", "powered-by"],
+    "children": ["rich-text#store-copyright", "powered-by#checkout"],
     "props": {
+      "preventVerticalStretch": true,
       "preventHorizontalStretch": true,
       "blockClass": "footerText"
+    }
+  },
+  "powered-by#checkout": {
+    "props": {
+      "blockClass": "checkout"
     }
   },
   "rich-text#store-copyright": {
