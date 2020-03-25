@@ -12,7 +12,7 @@
     "children": [
       "flex-layout.row#checkout-mobile-header",
       "checkout-step-group#checkout-mobile",
-      "summary-wrapper",
+      "summary-wrapper#review",
       "place-order",
       "footer-layout#checkout-mobile"
     ],
@@ -45,10 +45,18 @@
   "drawer-trigger#checkout-drawer": {
     "children": ["view-cart-label"]
   },
+  "drawer-trigger#checkout-drawer-review": {
+    "children": ["view-cart-label#review"]
+  },
   "drawer-header#checkout-drawer-header": {
     "children": ["flex-layout.row#checkout-drawer-header"],
     "props": {
       "blockClass": "checkout"
+    }
+  },
+  "view-cart-label#review": {
+    "props": {
+      "variant": "primary"
     }
   },
   "flex-layout.row#checkout-drawer-header": {

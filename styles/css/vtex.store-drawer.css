@@ -14,7 +14,8 @@
 }
 
 .openIconContainer--checkout {
-  margin-right: -.75rem;
+  margin-right: -.5rem;
+  padding: .5rem;
 }
 
 .drawerHeader--checkout {
