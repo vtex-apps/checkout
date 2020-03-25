@@ -20,7 +20,7 @@
     "props": {
       "blockClass": "checkoutColumn",
       "preventVerticalStretch": true,
-      "width": "66%"
+      "width": "60%"
     }
   }
 }

@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Alignment of open cart button in header.
 - Sidebar padding in bigger breakpoints.
 - Max width of container.
+- Ratio width between checkout and sidebar on desktop.
 
 ## [2.4.1] - 2020-03-23
 
