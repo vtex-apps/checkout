@@ -19,6 +19,9 @@
     "checkout/payments": {
       "component": "vtex.render-runtime/ExtensionContainer"
     },
+    "checkout/universal": {
+      "component": "vtex.render-runtime/ExtensionContainer"
+    },
     "orderplaced/pixels": {
       "component": "vtex.render-runtime/ExtensionContainer"
     }

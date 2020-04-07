@@ -1,6 +1,6 @@
 import {Apps, InstanceOptions} from '@vtex/api'
 import {ColossusContext} from 'colossus'
-import * as NodeCache from 'node-cache'
+import NodeCache from 'node-cache'
 import {keys, map, mergeAll} from 'ramda'
 
 const CHECKOUT_BUILD_FILE = 'dist/vtex.checkout/checkout.json'
@@ -23,7 +23,7 @@ const instanceOptions: InstanceOptions = {
 
 const getIdWithoutBuild = (id: string) => id.split('+build')[0]
 
-const notFound = <T>(fallback: T) => (error): T => {
+const notFound = <T>(fallback: T) => (error: any): T => {
   if (error.response && error.response.status === 404) {
     return fallback
   }
