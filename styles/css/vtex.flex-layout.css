@@ -8,22 +8,7 @@
 .flexRowContent--checkoutContainer {
   min-height: 100vh;
   position: relative;
-}
-
-.flexRowContent--checkoutContainer::after {
-  position: absolute;
-  content: ' ';
-  display: block;
-  background: #f2f4f5;
-  left: 100%;
-  width: calc((100vw - 100%) / 2);
-  height: 100%;
-}
-
-@media only screen and (max-width: 64em) {
-  .flexRowContent--checkoutContainer::after {
-    display: none;
-  }
+  width: auto;
 }
 
 .flexCol--checkoutColumn {
@@ -106,13 +91,19 @@
 
 .flexRow--checkoutContainer {
   margin: 0 1rem;
+  /* margin: 0; */
 }
 
 /* S */
-@media screen and (min-width: 39em) and (max-width: 40em) {
-  .flexRow--checkoutContainer {
+@media screen and (max-width: 40em) {
+  .flexRowContent--checkoutContainer {
     margin: 0 auto;
-    width: 37rem;
+    /* width: 37rem; */
+  }
+
+  .flexRow--checkoutContainer {
+    margin: 0 1rem;
+    background: none;
   }
 }
 
@@ -120,18 +111,20 @@
 @media screen and (min-width: 40em) and (max-width: 61em) {
   .flexRow--checkoutContainer {
     margin: 0 1.5rem;
+  /* .flexRowContent--checkoutContainer { */
+    margin: 0 1.5em;
   }
 }
 
 @media screen and (min-width: 61em) and (max-width: 64em) {
-  .flexRow--checkoutContainer {
+  .flexRowContent--checkoutContainer {
     margin: 0 auto;
     width: 58rem;
   }
 }
 
 /* L */
-@media screen and (min-width: 64em) and (max-width: 78em) {
+@media screen and (min-width: 64em) {
   .flexRow--checkoutContainer {
     margin: 0 3rem;
   }
@@ -139,6 +132,38 @@
 
 @media screen and (min-width: 78em) {
   .flexRow--checkoutContainer {
+    background: linear-gradient(90deg, transparent 64.75%, #f2f4f5 35.25%);
+  }
+}
+
+@media screen and (min-width: 64em) and (max-width: 78em) {
+  .flexRowContent--checkoutContainer {
+    margin: 0 3em;
+  }
+}
+
+@media screen and (min-width: 78em) and (max-width: 80em) {
+  .flexRowContent--checkoutContainer {
+    margin: 0 auto;
+    width: 72em;
+  }
+}
+
+/* XL */
+@media screen and (min-width: 80em) {
+  .flexRow--checkoutContainer {
+    margin: 0;
+  }
+}
+@media screen and (min-width: 80em) and (max-width: 104em) {
+  .flexRowContent--checkoutContainer {
+    margin: 0 4em;
+    width: auto;
+  }
+}
+
+@media screen and (min-width: 104em) {
+  .flexRowContent--checkoutContainer {
     margin: 0 auto;
     width: 72rem;
   }
