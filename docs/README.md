@@ -28,10 +28,10 @@ checkout
 |
 └── checkout-container (provides utilities used by the checkout steps)
     ├── checkout-identification
-    └── checkout-steps
-        ├── profile-step (contains the profile form)
-        ├── shipping-step (contains the shipping form)
-        └── payment-step (contains the payment form)
+    └── checkout-step-group
+        ├── checkout-profile (contains the profile form)
+        ├── checkout-shipping (contains the shipping form)
+        └── checkout-payment (contains the payment form)
 ... to be continued
 ```
 
@@ -39,7 +39,6 @@ checkout
 All GraphQL queries and mutations used by Checkout IO are located in [`checkout-resources`](https://github.com/vtex-apps/checkout-resources). This makes it possible to reuse GraphQL fragments and avoid duplicating the response for each query/mutation.
 
 ## Dependencies
-
 - [shipping-estimate-translator](https://github.com/vtex-apps/shipping-estimate-translator)
 - [format-currency](https://github.com/vtex-apps/format-currency)
 - [price](https://github.com/vtex-apps/price)
@@ -55,12 +54,20 @@ All GraphQL queries and mutations used by Checkout IO are located in [`checkout-
 - [checkout](https://github.com/vtex-apps/checkout)
 - [checkout-container](https://github.com/vtex/checkout-container)
 - [checkout-cart](https://github.com/vtex-apps/checkout-cart)
-- [checkout-identification](https://github.com/vtex-apps/checkout-identification)
+- [product-list](https://github.com/vtex-apps/product-list)
+- [shipping-calculator](https://github.com/vtex-apps/shipping-calculator)
 - [checkout-summary](https://github.com/vtex-apps/checkout-summary)
 - [checkout-coupon](https://github.com/vtex-apps/checkout-coupon)
 - [checkout-step-group](https://github.com/vtex-apps/checkout-step-group)
-- [product-list](https://github.com/vtex-apps/product-list)
-- [shipping-calculator](https://github.com/vtex-apps/shipping-calculator)
+- [checkout-identification](https://github.com/vtex-apps/checkout-identification)
+- [checkout-profile](https://github.com/vtex-apps/checkout-profile)
+- [checkout-shipping](https://github.com/vtex-apps/checkout-shipping)
+- [checkout-payment](https://github.com/vtex-apps/checkout-payment)
 
 ## BFF
 - [checkout-graphql](https://github.com/vtex/checkout-graphql)
+- [gateway-graphql](https://github.com/vtex/gateway-graphql)
+- [places-graphql](https://github.com/vtex-apps/places-graphql)
+
+## Extra
+- [checkout-fullstory](https://github.com/vtex-apps/checkout-fullstory)
