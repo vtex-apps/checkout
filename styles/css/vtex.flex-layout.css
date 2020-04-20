@@ -27,8 +27,8 @@
 }
 
 .flexCol--itemsSummary {
+  background-color: #f2f4f5;
   height: 100%;
-  animation: fade-in-right 500ms cubic-bezier(0.455, 0.030, 0.515, 0.955) 480ms both;
 }
 
 .flexRowContent--itemsSummaryMeta {
@@ -91,9 +91,7 @@
 /* L */
 @media screen and (min-width: 64em) {
   .flexRow--checkoutContainer {
-    background-image: linear-gradient(90deg, transparent 64.75%, #f2f4f5 35.25%);
-    background-repeat: no-repeat;
-    animation: gradient-right 500ms cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+    background: linear-gradient(90deg, transparent 64.75%, #f2f4f5 35.25%);
   }
 }
 
@@ -127,27 +125,5 @@
   .flexRowContent--checkoutContainer {
     margin: 0 auto;
     width: 96em;
-  }
-}
-
-/* Keyframes */
-@keyframes fade-in-right {
-  0% {
-    overflow: hidden;
-    transform: translateX(2em);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes gradient-right {
-  0% {
-    background-position: 3000px;
-  }
-  100% {
-    background-position: 0;
   }
 }
