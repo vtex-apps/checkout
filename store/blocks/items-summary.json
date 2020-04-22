@@ -4,29 +4,27 @@
       "flex-layout.row#items-meta",
       "divider#horizontal",
       "checkout-product-list",
-      "summary-wrapper"
-    ],
-    "props": {
-      "blockClass": "itemsSummary",
-      "preventVerticalStretch": true,
-      "paddingLeft": 6
-    }
-  },
-  "flex-layout.col#items-summary-mobile": {
-    "children": [
-      "divider#horizontal",
-      "checkout-product-list",
-      "summary-wrapper#drawer"
+      "summary-wrapper#lean"
     ],
     "props": {
       "blockClass": "itemsSummary",
       "preventVerticalStretch": true
     }
   },
+  "flex-layout.col#items-summary-mobile": {
+    "children": [
+      "divider#horizontal",
+      "checkout-product-list",
+      "summary-wrapper#lean"
+    ],
+    "props": {
+      "blockClass": "itemsSummaryMobile",
+      "preventVerticalStretch": true
+    }
+  },
   "flex-layout.row#items-meta": {
     "children": ["product-counter", "back-to-cart-button"],
     "props": {
-      "paddingTop": 7,
       "paddingBottom": 5,
       "preventHorizontalStretch": true,
       "preserveLayoutOnMobile": true,
@@ -44,7 +42,10 @@
   "summary-wrapper": {
     "blocks": ["checkout-summary#checkout"]
   },
-  "summary-wrapper#drawer": {
+  "summary-wrapper#review": {
+    "blocks": ["checkout-summary#checkout-review"]
+  },
+  "summary-wrapper#lean": {
     "blocks": ["checkout-summary#checkout-drawer"],
     "props": {
       "lean": true
@@ -62,10 +63,31 @@
       "blockClass": "checkoutDrawer"
     }
   },
+  "checkout-summary#checkout-review": {
+    "blocks": ["drawer#items-drawer"],
+    "children": ["flex-layout.row#summary-coupon", "summary-totalizers"],
+    "props": {
+      "blockClass": "checkout"
+    }
+  },
   "flex-layout.row#summary-coupon": {
     "children": ["summary-coupon"],
     "props": {
       "marginBottom": 6
     }
+  },
+  "drawer#items-drawer": {
+    "blocks": [
+      "drawer-header#checkout-drawer-header",
+      "drawer-trigger#checkout-drawer-review"
+    ],
+    "children": ["flex-layout.col#items-summary-lean"],
+    "props": {
+      "slideDirection": "rightToLeft",
+      "blockClass": "checkout"
+    }
+  },
+  "flex-layout.col#items-summary-lean": {
+    "children": ["divider#horizontal", "checkout-product-list"]
   }
 }

@@ -13,6 +13,11 @@
   }
 }
 
+.openIconContainer--checkout {
+  margin-right: -.5rem;
+  padding: .5rem;
+}
+
 .drawerHeader--checkout {
   overflow: hidden;
 }

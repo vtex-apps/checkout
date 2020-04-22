@@ -13,7 +13,7 @@
   .footerLayout--checkoutFooterMobile {
     margin-left: -1.5rem;
     margin-right: -1.5rem;
-    padding: 1.5rem 1.75rem;
+    padding: 1.75rem 1.5rem;
   }
 }
 
@@ -21,5 +21,19 @@
   .footerLayout--checkoutFooterMobile {
     margin-left: calc((100% - 100vw) / 2);
     margin-right: calc((100% - 100vw) / 2);
+    padding-left: calc((100vw - 100%) / 2);
+    padding-right: calc((100vw - 100%) / 2);
+  }
+}
+
+.poweredBy--checkout {
+  height: auto;
+  margin-top: 1.5rem;
+  align-items: flex-start;
+}
+
+@media only screen and (min-width: 40em) {
+  .poweredBy--checkout {
+    margin-top: 0;
   }
 }
