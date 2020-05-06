@@ -4,9 +4,9 @@ import { Router } from 'vtex.checkout-container'
 const REVIEW_ROUTE = '/'
 
 const ReviewContainer: React.FC = ({ children }) => {
-  const matches = !!Router.useRouteMatch(REVIEW_ROUTE)
+  const match = Router.useRouteMatch(REVIEW_ROUTE)
 
-  if (!matches) {
+  if (!match?.isExact) {
     return null
   }
 
