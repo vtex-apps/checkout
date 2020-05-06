@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Added
+
+- Animation to items summary.
+
+### Fixed
+
+- Layout overflow and a one pixel line right beside the summary.
+
 ## [2.4.2] - 2020-04-22
 
 ### Added
