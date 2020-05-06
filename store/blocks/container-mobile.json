@@ -12,8 +12,7 @@
     "children": [
       "flex-layout.row#checkout-mobile-header",
       "checkout-step-group#checkout-mobile",
-      "summary-wrapper#review",
-      "place-order",
+      "review-container#mobile",
       "footer-layout#checkout-mobile"
     ],
     "props": {
