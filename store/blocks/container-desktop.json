@@ -14,7 +14,7 @@
     "children": [
       "image#logo",
       "checkout-step-group",
-      "place-order",
+      "review-container#desktop",
       "footer-layout#checkout"
     ],
     "props": {

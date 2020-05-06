@@ -60,5 +60,9 @@
   },
   "view-cart-label": {
     "component": "ViewCartLabel"
+  },
+  "review-container": {
+    "component": "ReviewContainer",
+    "composition": "children"
   }
 }
