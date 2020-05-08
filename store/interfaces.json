@@ -64,5 +64,17 @@
   "review-container": {
     "component": "ReviewContainer",
     "composition": "children"
+  },
+  "responsive-container": {
+    "component": "ResponsiveContainer",
+    "composition": "children"
+  },
+  "responsive-container.desktop": {
+    "component": "DesktopContainer",
+    "composition": "children"
+  },
+  "responsive-container.mobile": {
+    "component": "MobileContainer",
+    "composition": "children"
   }
 }

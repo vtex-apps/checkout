@@ -6,10 +6,7 @@
     "blocks": ["checkout-cart-add"]
   },
   "store.checkout.container": {
-    "children": [
-      "responsive-layout.desktop#checkout",
-      "responsive-layout.mobile#checkout"
-    ]
+    "children": ["responsive-container#checkout"]
   },
   "store.checkout.identification": {
     "children": ["flex-layout.row#identification"]
@@ -25,10 +22,16 @@
     }
   },
 
-  "responsive-layout.desktop#checkout": {
+  "responsive-container#checkout": {
+    "children": [
+      "responsive-container.desktop#checkout",
+      "responsive-container.mobile#checkout"
+    ]
+  },
+  "responsive-container.desktop#checkout": {
     "children": ["flex-layout.row#container-desktop"]
   },
-  "responsive-layout.mobile#checkout": {
+  "responsive-container.mobile#checkout": {
     "children": ["flex-layout.row#container-mobile"]
   }
 }
