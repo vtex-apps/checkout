@@ -1406,6 +1406,15 @@ bcrypt-pbkdf@^1.0.0:
   dependencies:
     tweetnacl "^0.14.3"
 
+belter@^1.0.41:
+  version "1.0.120"
+  resolved "https://registry.yarnpkg.com/belter/-/belter-1.0.120.tgz#91499301b543b983c81bf12a9edd33e8ed30774b"
+  integrity sha512-n9y+gNmacueLY8+aR/AVu5KxqzoHlrgR5pr24n81KYlqzMsLlRJipi993HBiUgkX7g6W1Zt91DaPozaqbnyKKw==
+  dependencies:
+    cross-domain-safe-weakmap "^1.0.20"
+    cross-domain-utils "^2.0.10"
+    zalgo-promise "^1.0.28"
+
 brace-expansion@^1.1.7:
   version "1.1.11"
   resolved "https://registry.yarnpkg.com/brace-expansion/-/brace-expansion-1.1.11.tgz#3c7fcbf529d87226f3d2f52b966ff5271eb441dd"
@@ -1646,6 +1655,20 @@ core-util-is@1.0.2, core-util-is@~1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
   integrity sha1-tf1UIgqivFq1eqtxQMlAdUUDwac=
+
+cross-domain-safe-weakmap@^1.0.1, cross-domain-safe-weakmap@^1.0.20:
+  version "1.0.27"
+  resolved "https://registry.yarnpkg.com/cross-domain-safe-weakmap/-/cross-domain-safe-weakmap-1.0.27.tgz#81a5eae012b3cfb7e7e5ca3d737a6c94c3499bab"
+  integrity sha512-f5etDzszteeGh99Dzd7o72FGwd8rLGzgEv50Vk0r8mLzPdQEzcb7Vmx3PfKWD4k66Hp8vN0BLPuBmmMs4UxseQ==
+  dependencies:
+    cross-domain-utils "^2.0.0"
+
+cross-domain-utils@^2.0.0, cross-domain-utils@^2.0.10:
+  version "2.0.32"
+  resolved "https://registry.yarnpkg.com/cross-domain-utils/-/cross-domain-utils-2.0.32.tgz#e2e5ec828f7a278c72e53c969993f8b32f974e7d"
+  integrity sha512-3qwXBJxVuctEcH6jg0MkFCyIYq6ta+x1OVlCmBrtJxlPGtdRqn0zV4Z0SfZaxzX3QBLAeiwWS8FKPQZ5ihWPxw==
+  dependencies:
+    zalgo-promise "^1.0.11"
 
 cross-spawn@^6.0.0:
   version "6.0.5"
@@ -3790,6 +3813,17 @@ posix-character-classes@^0.1.0:
   resolved "https://registry.yarnpkg.com/posix-character-classes/-/posix-character-classes-0.1.1.tgz#01eac0fe3b5af71a2a6c02feabb8c1fef7e00eab"
   integrity sha1-AerA/jta9xoqbAL+q7jB/vfgDqs=
 
+post-robot@^10.0.31:
+  version "10.0.31"
+  resolved "https://registry.yarnpkg.com/post-robot/-/post-robot-10.0.31.tgz#167a6e57c48489f2600b038145cfce53be9163be"
+  integrity sha512-BIw0VCKRlugKYiRTiAYWS/g2/LYjoCfn/YHO9MKcrGGyeHqw1FBaFx4FTcYsTz5z8s6bJGlj6WynSEAe6uA5LA==
+  dependencies:
+    belter "^1.0.41"
+    cross-domain-safe-weakmap "^1.0.1"
+    cross-domain-utils "^2.0.0"
+    universal-serialize "^1.0.4"
+    zalgo-promise "^1.0.3"
+
 prelude-ls@~1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/prelude-ls/-/prelude-ls-1.1.2.tgz#21932a549f5e52ffd9a827f570e04be62a97da54"
@@ -4697,6 +4731,11 @@ union-value@^1.0.0:
     is-extendable "^0.1.1"
     set-value "^0.4.3"
 
+universal-serialize@^1.0.4:
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/universal-serialize/-/universal-serialize-1.0.8.tgz#93470f043a9ed30094104824c02d21f607b61e6a"
+  integrity sha512-AhC3D26asmMkxAadYjCUJh98AUV/Fpp9uStVz4OuigpaGqIwY+i95EWE392P+4ObOPFHw8TUk/GazyiSGDtxhA==
+
 universalify@^0.1.0:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/universalify/-/universalify-0.1.2.tgz#b646f69be3942dabcecc9d6639c80dc105efaa66"
@@ -4770,13 +4809,13 @@ verror@1.10.0:
   version "0.4.0"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-container@0.4.0/public/@types/vtex.checkout-container#5510b1ebb8bc8ae565371ee70149ceee5ce1e321"
 
-"vtex.checkout-identification@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-identification@0.2.0/public/@types/vtex.checkout-identification":
-  version "0.2.0"
-  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-identification@0.2.0/public/@types/vtex.checkout-identification#b0f26701295eb5af723d2e0f80689d06142447bb"
+"vtex.checkout-graphql@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-graphql@0.34.1/public/@types/vtex.checkout-graphql":
+  version "0.34.1"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-graphql@0.34.1/public/@types/vtex.checkout-graphql#fcc47d48f6668b2b17d519bfb7df0b053c86a1a0"
 
-"vtex.checkout-step-group@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-step-group@0.7.0/public/@types/vtex.checkout-step-group":
+"vtex.checkout-step-group@https://lucas--checkoutio.myvtex.com/_v/private/typings/linked/v1/vtex.checkout-step-group@0.7.0+build1589833112/public/@types/vtex.checkout-step-group":
   version "0.7.0"
-  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-step-group@0.7.0/public/@types/vtex.checkout-step-group#25944326eb26f287d65ac41bed4b914d30b525ca"
+  resolved "https://lucas--checkoutio.myvtex.com/_v/private/typings/linked/v1/vtex.checkout-step-group@0.7.0+build1589833112/public/@types/vtex.checkout-step-group#3ecaccacba86f59768353f9f657c7880431bdb78"
 
 "vtex.checkout-summary@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-summary@0.16.0/public/@types/vtex.checkout-summary":
   version "0.16.0"
@@ -4802,6 +4841,10 @@ verror@1.10.0:
   version "0.8.4"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.order-manager@0.8.4/public/@types/vtex.order-manager#3a4761c73364853954dd61a61d1d01260cbbf634"
 
+"vtex.order-payment@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.order-payment@0.3.0/public/@types/vtex.order-payment":
+  version "0.3.0"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.order-payment@0.3.0/public/@types/vtex.order-payment#76837cf95bd9d4b50ca6d90fdb26305b197603a8"
+
 "vtex.pixel-interfaces@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.pixel-interfaces@1.1.1/public/_types/react":
   version "0.0.0"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.pixel-interfaces@1.1.1/public/_types/react#fa7a0347e046eab3dd768998fc9252b2c0dd5aef"
@@ -4810,21 +4853,21 @@ verror@1.10.0:
   version "1.1.4"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.pixel-manager@1.1.4/public/@types/vtex.pixel-manager#96907e17f4e5c584162a47dc425cb5afb2267d00"
 
-"vtex.product-list@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.product-list@0.19.3/public/@types/vtex.product-list":
-  version "0.19.3"
-  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.product-list@0.19.3/public/@types/vtex.product-list#0affb23285851a0d62cb03ea0d5a9e40758b51df"
+"vtex.product-list@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.product-list@0.19.4/public/@types/vtex.product-list":
+  version "0.19.4"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.product-list@0.19.4/public/@types/vtex.product-list#9f0ce2c74f2c62adad71796e3d6f723b98e3d368"
 
-"vtex.render-runtime@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.render-runtime@8.100.4/public/@types/vtex.render-runtime":
-  version "8.100.4"
-  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.render-runtime@8.100.4/public/@types/vtex.render-runtime#b94c966be2d1c3d8bc9f1caf2dd9f462d88e98d2"
+"vtex.render-runtime@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.render-runtime@8.101.0/public/@types/vtex.render-runtime":
+  version "8.101.0"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.render-runtime@8.101.0/public/@types/vtex.render-runtime#026c4283d51b8445c68829b0cc61f13b39aee0c7"
 
 "vtex.rich-text@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.rich-text@0.9.1/public/@types/vtex.rich-text":
   version "0.9.1"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.rich-text@0.9.1/public/@types/vtex.rich-text#cf0108c9017c4b3763ab58927734545479721942"
 
-"vtex.store-components@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-components@3.114.3/public/_types/react":
+"vtex.store-components@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-components@3.114.5/public/_types/react":
   version "0.0.0"
-  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-components@3.114.3/public/_types/react#fa7a0347e046eab3dd768998fc9252b2c0dd5aef"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-components@3.114.5/public/_types/react#fa7a0347e046eab3dd768998fc9252b2c0dd5aef"
 
 "vtex.store-drawer@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-drawer@0.12.1/public/@types/vtex.store-drawer":
   version "0.12.1"
@@ -4842,9 +4885,9 @@ verror@1.10.0:
   version "2.95.5"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store@2.95.5/public/@types/vtex.store#70c2cad82c4653015dd5d1a1c9ceede4a21308b8"
 
-"vtex.styleguide@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.styleguide@9.116.0/public/@types/vtex.styleguide":
-  version "9.116.0"
-  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.styleguide@9.116.0/public/@types/vtex.styleguide#f17be9afb6ee66c71f2ea8d5ba81b2d18b2caa76"
+"vtex.styleguide@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.styleguide@9.118.0/public/@types/vtex.styleguide":
+  version "9.118.0"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.styleguide@9.118.0/public/@types/vtex.styleguide#40cbd9c99e0cd8477d32aafe243d39c0dfadeb42"
 
 w3c-hr-time@^1.0.1:
   version "1.0.1"
@@ -4998,6 +5041,11 @@ yargs@^12.0.2:
     which-module "^2.0.0"
     y18n "^3.2.1 || ^4.0.0"
     yargs-parser "^11.1.1"
+
+zalgo-promise@^1.0.11, zalgo-promise@^1.0.28, zalgo-promise@^1.0.3:
+  version "1.0.44"
+  resolved "https://registry.yarnpkg.com/zalgo-promise/-/zalgo-promise-1.0.44.tgz#10b6888def701abc0681ec760d73e2bfd2448ae2"
+  integrity sha512-CSQ1xh0vVwgrohObNdysPANonBV+3yl1Xy+qrtMWBvb/a0D/2OUNqb0GJvaAgGtP/gQawtiQAFil2bGSq8aoMA==
 
 zen-observable-ts@^0.8.18:
   version "0.8.18"
