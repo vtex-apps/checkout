@@ -11,6 +11,7 @@ const PlaceOrder: React.FC = () => {
   const { orderForm } = useOrderForm()
   const {
     culture: { currency },
+    rootPath = '',
   } = useRuntime()
 
   const [placingOrder, setPlacingOrder] = useState(false)
@@ -50,7 +51,7 @@ const PlaceOrder: React.FC = () => {
     setPlacingOrder(true)
 
     const startTransactionResponse = await fetch(
-      `/api/checkout/pub/orderForm/${orderForm.id}/transaction`,
+      `${rootPath}/api/checkout/pub/orderForm/${orderForm.id}/transaction`,
       {
         method: 'post',
         body: JSON.stringify(transactionData),
@@ -118,7 +119,7 @@ const PlaceOrder: React.FC = () => {
       )
 
       const callbackResponse = await fetch(
-        `/api/checkout/pub/gatewayCallback/${orderGroupId}`,
+        `${rootPath}/api/checkout/pub/gatewayCallback/${orderGroupId}`,
         { method: 'POST' }
       )
 
