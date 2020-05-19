@@ -61,7 +61,7 @@ const PlaceOrder: React.FC = () => {
       }
     )
 
-    const transaction = await startTransactionResponse.json()
+    const transaction = (await startTransactionResponse.json()) as TransactionResponse
 
     const {
       orderGroup: orderGroupId,
@@ -73,33 +73,32 @@ const PlaceOrder: React.FC = () => {
     } = transaction
 
     if (merchantTransactions?.length > 0) {
-      const allPayments = transactionPayments.reduce(
-        (payments: any[], transactionPayment: any) => {
+      const allPayments = transactionPayments.reduce<GatewayPayment[]>(
+        (payments, transactionPayment) => {
           const merchantPayments = transactionPayment.merchantSellerPayments
-            .map((merchantPayment: any) => {
-              const newPayment = {
-                ...transactionPayment,
-                ...merchantPayment,
-              }
-
+            .map(merchantPayment => {
               const merchantTransaction = merchantTransactions.find(
-                (merchant: any) => merchant.id === merchantPayment.id
+                merchant => merchant.id === merchantPayment.id
               )
 
               if (!merchantTransaction) {
                 return null
               }
 
-              newPayment.transaction = {
-                id: merchantTransaction.transactionId,
-                merchantName: merchantTransaction.merchantName,
-              }
-
-              newPayment.currencyCode = currency
-
-              return newPayment
+              return {
+                ...transactionPayment,
+                ...merchantPayment,
+                currencyCode: currency as string,
+                transaction: {
+                  id: merchantTransaction.transactionId,
+                  merchantName: merchantTransaction.merchantName,
+                },
+              } as GatewayPayment
             })
-            .filter((merchantPayment: any) => merchantPayment != null)
+            .filter(
+              (merchantPayment): merchantPayment is GatewayPayment =>
+                merchantPayment != null
+            )
 
           return payments.concat(merchantPayments)
         },
