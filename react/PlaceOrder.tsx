@@ -4,11 +4,14 @@ import { Button } from 'vtex.styleguide'
 import { OrderForm } from 'vtex.order-manager'
 import postRobot from 'post-robot'
 import { useRuntime } from 'vtex.render-runtime'
+import { OrderPayment } from 'vtex.order-payment'
 
 const { useOrderForm } = OrderForm
+const { useOrderPayment } = OrderPayment
 
 const PlaceOrder: React.FC = () => {
   const { orderForm } = useOrderForm()
+  const { value, referenceValue, interestValue } = useOrderPayment()
   const {
     culture: { currency },
     rootPath = '',
@@ -20,25 +23,6 @@ const PlaceOrder: React.FC = () => {
   )
 
   const handlePlaceOrder = async () => {
-    const referenceValue = orderForm.totalizers.reduce((total, totalizer) => {
-      if (totalizer?.id === 'Tax' || totalizer?.id === 'interest') {
-        return total
-      }
-
-      return total + (totalizer?.value ?? 0)
-    }, 0)
-
-    const value = orderForm.paymentData.payments.reduce(
-      (total, payment) => total + (payment?.value ?? 0),
-      0
-    )
-
-    const interestValue = orderForm.paymentData.payments.reduce(
-      (total, payment) =>
-        total + ((payment?.value ?? 0) - (payment?.referenceValue ?? 0)),
-      0
-    )
-
     const transactionData = {
       referenceId: orderForm.id,
       value,
