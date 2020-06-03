@@ -61,6 +61,11 @@ const PlaceOrder: React.FC = () => {
       }
     )
 
+    if (!startTransactionResponse.ok) {
+      setPlacingOrder(false)
+      return
+    }
+
     const transaction = (await startTransactionResponse.json()) as TransactionResponse
 
     const {
