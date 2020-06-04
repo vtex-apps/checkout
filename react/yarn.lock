@@ -4845,9 +4845,9 @@ verror@1.10.0:
   version "0.8.4"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.order-manager@0.8.4/public/@types/vtex.order-manager#3a4761c73364853954dd61a61d1d01260cbbf634"
 
-"vtex.order-payment@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.order-payment@0.3.0/public/@types/vtex.order-payment":
-  version "0.3.0"
-  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.order-payment@0.3.0/public/@types/vtex.order-payment#76837cf95bd9d4b50ca6d90fdb26305b197603a8"
+"vtex.order-payment@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.order-payment@0.6.0/public/@types/vtex.order-payment":
+  version "0.6.0"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.order-payment@0.6.0/public/@types/vtex.order-payment#5203a113df53550f41449f5c43337c31a93b4fd8"
 
 "vtex.pixel-interfaces@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.pixel-interfaces@1.1.1/public/_types/react":
   version "0.0.0"
@@ -4861,17 +4861,17 @@ verror@1.10.0:
   version "0.20.0"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.product-list@0.20.0/public/@types/vtex.product-list#bf8bb2922def26b0e4ac5d2bcdba7859dd8b4b36"
 
-"vtex.render-runtime@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.render-runtime@8.102.1/public/@types/vtex.render-runtime":
-  version "8.102.1"
-  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.render-runtime@8.102.1/public/@types/vtex.render-runtime#95fcc13efb1c3fd9070798fb0acaafe9dd5cf8eb"
+"vtex.render-runtime@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.render-runtime@8.104.0/public/@types/vtex.render-runtime":
+  version "8.104.0"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.render-runtime@8.104.0/public/@types/vtex.render-runtime#ca1eaf6bcc0d110af3109606b1fbb1aa00639c5d"
 
 "vtex.rich-text@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.rich-text@0.10.0/public/@types/vtex.rich-text":
   version "0.10.0"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.rich-text@0.10.0/public/@types/vtex.rich-text#58a669b18024420c759312a2d1b649c766cc6b1e"
 
-"vtex.store-components@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-components@3.115.0/public/_types/react":
+"vtex.store-components@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-components@3.116.0/public/_types/react":
   version "0.0.0"
-  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-components@3.115.0/public/_types/react#fa7a0347e046eab3dd768998fc9252b2c0dd5aef"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-components@3.116.0/public/_types/react#fa7a0347e046eab3dd768998fc9252b2c0dd5aef"
 
 "vtex.store-drawer@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-drawer@0.12.1/public/@types/vtex.store-drawer":
   version "0.12.1"
@@ -4885,13 +4885,13 @@ verror@1.10.0:
   version "0.0.0"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-header@2.25.5/public/_types/react#fa7a0347e046eab3dd768998fc9252b2c0dd5aef"
 
-"vtex.store@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store@2.95.5/public/@types/vtex.store":
-  version "2.95.5"
-  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store@2.95.5/public/@types/vtex.store#70c2cad82c4653015dd5d1a1c9ceede4a21308b8"
+"vtex.store@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store@2.96.1/public/@types/vtex.store":
+  version "2.96.1"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store@2.96.1/public/@types/vtex.store#2085868375f2631d6b32e81464a0076df529516f"
 
-"vtex.styleguide@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.styleguide@9.119.0/public/@types/vtex.styleguide":
-  version "9.119.0"
-  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.styleguide@9.119.0/public/@types/vtex.styleguide#e403de99f313f6ac4b065afad0079711b0992163"
+"vtex.styleguide@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.styleguide@9.119.1/public/@types/vtex.styleguide":
+  version "9.119.1"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.styleguide@9.119.1/public/@types/vtex.styleguide#ccec3b84707088971c0c800e363bddac42b85353"
 
 w3c-hr-time@^1.0.1:
   version "1.0.1"
