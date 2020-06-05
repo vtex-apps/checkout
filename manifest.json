@@ -1,11 +1,13 @@
 {
   "vendor": "vtex",
   "name": "checkout",
-  "version": "2.4.5",
+  "version": "2.5.0",
   "title": "Checkout UI",
   "description": "Checkout UI for the Store Framework",
   "defaultLocale": "pt-BR",
-  "registries": ["smartcheckout"],
+  "registries": [
+    "smartcheckout"
+  ],
   "builders": {
     "assets": "0.x",
     "docs": "0.x",
