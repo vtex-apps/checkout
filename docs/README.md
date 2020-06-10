@@ -71,3 +71,4 @@ All GraphQL queries and mutations used by Checkout IO are located in [`checkout-
 
 ## Extra
 - [checkout-fullstory](https://github.com/vtex-apps/checkout-fullstory)
+- [checkout-io-tests](https://github.com/vtex-apps/checkout-io-tests)
