@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useMemo } from 'react'
 import { FormattedMessage } from 'react-intl'
 import { Button } from 'vtex.styleguide'
 import { OrderForm } from 'vtex.order-manager'
@@ -11,7 +11,12 @@ const { useOrderPayment } = OrderPayment
 
 const PlaceOrder: React.FC = () => {
   const { orderForm } = useOrderForm()
-  const { value, referenceValue, interestValue } = useOrderPayment()
+  const {
+    paymentSystems,
+    value,
+    referenceValue,
+    interestValue,
+  } = useOrderPayment()
   const {
     culture: { currency },
     rootPath = '',
@@ -20,6 +25,16 @@ const PlaceOrder: React.FC = () => {
   const [placingOrder, setPlacingOrder] = useState(false)
   const [cardFormIframe] = useState(
     () => document.getElementById('chk-card-form')! as HTMLIFrameElement
+  )
+
+  const paymentSystemsWithSensitiveData = useMemo(
+    () =>
+      paymentSystems
+        .filter(
+          paymentSystem => paymentSystem.groupName === 'creditCardPaymentGroup'
+        )
+        .map(({ id }) => id),
+    [paymentSystems]
   )
 
   const handlePlaceOrder = async () => {
@@ -94,17 +109,47 @@ const PlaceOrder: React.FC = () => {
         []
       )
 
-      const { data: redirectUrl } = await postRobot.send(
-        cardFormIframe.contentWindow,
-        'sendPayments',
-        {
-          payments: allPayments,
-          receiverUri,
-          orderId: orderGroupId,
-          gatewayCallbackTemplatePath,
-          transactionId,
-        }
+      const hasSensitiveData = allPayments.some(payment =>
+        paymentSystemsWithSensitiveData.includes(payment.paymentSystem!)
       )
+
+      let redirectUrl
+
+      if (hasSensitiveData) {
+        const { data } = await postRobot.send(
+          cardFormIframe.contentWindow,
+          'sendPayments',
+          {
+            payments: allPayments,
+            receiverUri,
+            orderId: orderGroupId,
+            gatewayCallbackTemplatePath,
+            transactionId,
+          }
+        )
+
+        redirectUrl = data
+      } else {
+        const paymentsResponse = await fetch(
+          `${rootPath}/api/payments/pub/transactions/${transactionId}/payments?orderId=${orderGroupId}`,
+          {
+            method: 'post',
+            headers: { 'content-type': 'application/json' },
+            body: JSON.stringify(allPayments),
+          }
+        )
+
+        if (paymentsResponse.status === 201) {
+          redirectUrl = gatewayCallbackTemplatePath.replace(
+            '{messageCode}',
+            'Success'
+          )
+        } else {
+          setPlacingOrder(false)
+          // TODO: show error message
+          return
+        }
+      }
 
       const callbackResponse = await fetch(
         `${rootPath}/api/checkout/pub/gatewayCallback/${orderGroupId}`,
@@ -115,7 +160,8 @@ const PlaceOrder: React.FC = () => {
         window.location.replace(redirectUrl)
       }
     } else if (!receiverUri) {
-      // go to first invalid step
+      // TODO: go to first invalid step
+      setPlacingOrder(false)
     } else if (transactionId === 'NO-PAYMENT') {
       window.location.href = receiverUri
     }
