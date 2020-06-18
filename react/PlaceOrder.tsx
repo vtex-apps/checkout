@@ -116,7 +116,7 @@ const PlaceOrder: React.FC = () => {
       let redirectUrl
 
       if (hasSensitiveData) {
-        const { data } = await postRobot.send(
+        const { data: url } = await postRobot.send(
           cardFormIframe.contentWindow,
           'sendPayments',
           {
@@ -128,7 +128,7 @@ const PlaceOrder: React.FC = () => {
           }
         )
 
-        redirectUrl = data
+        redirectUrl = url
       } else {
         const paymentsResponse = await fetch(
           `${rootPath}/api/payments/pub/transactions/${transactionId}/payments?orderId=${orderGroupId}`,
