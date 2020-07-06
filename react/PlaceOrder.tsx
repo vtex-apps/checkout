@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react'
-import { FormattedMessage } from 'react-intl'
-import { Button } from 'vtex.styleguide'
+import { FormattedMessage, useIntl } from 'react-intl'
+import { Button, Alert } from 'vtex.styleguide'
 import { OrderForm } from 'vtex.order-manager'
 import postRobot from 'post-robot'
 import { useRuntime } from 'vtex.render-runtime'
@@ -8,6 +8,18 @@ import { OrderPayment } from 'vtex.order-payment'
 
 const { useOrderForm } = OrderForm
 const { useOrderPayment } = OrderPayment
+
+const getCardFormIframe = (() => {
+  let iframe: HTMLIFrameElement | null = null
+
+  return (): HTMLIFrameElement => {
+    if (!iframe) {
+      iframe = document.getElementById('chk-card-form')! as HTMLIFrameElement
+    }
+
+    return iframe
+  }
+})()
 
 const PlaceOrder: React.FC = () => {
   const { orderForm } = useOrderForm()
@@ -22,10 +34,10 @@ const PlaceOrder: React.FC = () => {
     rootPath = '',
   } = useRuntime()
 
+  const intl = useIntl()
+
   const [placingOrder, setPlacingOrder] = useState(false)
-  const [cardFormIframe] = useState(
-    () => document.getElementById('chk-card-form')! as HTMLIFrameElement
-  )
+  const [errorMessage, setErrorMessage] = useState<string | null>(null)
 
   const paymentSystemsWithSensitiveData = useMemo(
     () =>
@@ -48,6 +60,7 @@ const PlaceOrder: React.FC = () => {
     }
 
     setPlacingOrder(true)
+    setErrorMessage(null)
 
     const startTransactionResponse = await fetch(
       `${rootPath}/api/checkout/pub/orderForm/${orderForm.id}/transaction`,
@@ -116,19 +129,29 @@ const PlaceOrder: React.FC = () => {
       let redirectUrl
 
       if (hasSensitiveData) {
-        const { data: url } = await postRobot.send(
-          cardFormIframe.contentWindow,
-          'sendPayments',
-          {
-            payments: allPayments,
-            receiverUri,
-            orderId: orderGroupId,
-            gatewayCallbackTemplatePath,
-            transactionId,
-          }
-        )
+        try {
+          const { data: url } = await postRobot.send(
+            getCardFormIframe().contentWindow,
+            'sendPayments',
+            {
+              payments: allPayments,
+              receiverUri,
+              orderId: orderGroupId,
+              gatewayCallbackTemplatePath,
+              transactionId,
+            }
+          )
 
-        redirectUrl = url
+          redirectUrl = url
+        } catch (err) {
+          setPlacingOrder(false)
+          setErrorMessage(
+            intl.formatMessage({
+              id: 'store/place-order.generic-error-message',
+            })
+          )
+          return
+        }
       } else {
         const paymentsResponse = await fetch(
           `${rootPath}/api/payments/pub/transactions/${transactionId}/payments?orderId=${orderGroupId}`,
@@ -146,7 +169,11 @@ const PlaceOrder: React.FC = () => {
           )
         } else {
           setPlacingOrder(false)
-          // TODO: show error message
+          setErrorMessage(
+            intl.formatMessage({
+              id: 'store/place-order.generic-error-message',
+            })
+          )
           return
         }
       }
@@ -160,8 +187,10 @@ const PlaceOrder: React.FC = () => {
         window.location.replace(redirectUrl)
       }
     } else if (!receiverUri) {
-      // TODO: go to first invalid step
       setPlacingOrder(false)
+      setErrorMessage(
+        intl.formatMessage({ id: 'store/place-order.generic-error-message' })
+      )
     } else if (transactionId === 'NO-PAYMENT') {
       window.location.href = receiverUri
     }
@@ -169,6 +198,20 @@ const PlaceOrder: React.FC = () => {
 
   return (
     <div className="ph8-ns">
+      {errorMessage && (
+        <div className="mb6 mb7-ns">
+          <Alert
+            type="error"
+            focusOnEnter
+            onClose={() => setErrorMessage(null)}
+            closeIconLabel={intl.formatMessage({
+              id: 'store/place-order.close-error-alert-label',
+            })}
+          >
+            {errorMessage}
+          </Alert>
+        </div>
+      )}
       <Button
         block
         size="large"
