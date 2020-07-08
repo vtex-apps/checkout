@@ -2,5 +2,7 @@
   "store/place-order-button": "Finalizar Compra",
   "store/checkout-product-count": "{quantity, plural, one {# producto} other {# productos}}",
   "store/edit-cart-label": "Editar Carrito",
-  "store/view-cart-label": "Ver Carrito"
+  "store/view-cart-label": "Ver Carrito",
+  "store/place-order.close-error-alert-label": "Cerca",
+  "store/place-order.generic-error-message": "La transacción no se pudo completar. Por favor, inténtelo de nuevo más tarde."
 }
