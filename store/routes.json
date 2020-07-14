@@ -5,7 +5,7 @@
   "store.checkout.cart-add": {
     "path": "/cart/add/"
   },
-  "store.checkout.container": {
+  "store.checkout.order-form": {
     "path": "/checkout"
   },
   "store.checkout.identification": {
