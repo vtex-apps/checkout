@@ -21,7 +21,7 @@
     "around": ["homeWrapper"],
     "allowed": ["checkout-cart-add"]
   },
-  "store.checkout.container": {
+  "store.checkout.order-form": {
     "before": ["header.full.checkout"],
     "around": ["checkout-container"],
     "after": ["footer.checkout"],

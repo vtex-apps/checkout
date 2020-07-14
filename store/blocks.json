@@ -5,7 +5,7 @@
   "store.checkout.cart-add": {
     "blocks": ["checkout-cart-add"]
   },
-  "store.checkout.container": {
+  "store.checkout.order-form": {
     "children": ["responsive-container#checkout"]
   },
   "store.checkout.identification": {
