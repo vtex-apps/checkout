@@ -25,7 +25,7 @@
     "@types/react-intl": "^2.3.17",
     "@vtex/test-tools": "^0.2.0",
     "apollo-client": "^2.5.1",
-    "typescript": "3.8.3",
+    "typescript": "3.9.7",
     "vtex.checkout-cart": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-cart@0.25.0/public/@types/vtex.checkout-cart",
     "vtex.checkout-container": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-container@0.4.0/public/@types/vtex.checkout-container",
     "vtex.checkout-graphql": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-graphql@0.34.2/public/@types/vtex.checkout-graphql",
