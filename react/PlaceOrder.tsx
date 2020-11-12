@@ -89,6 +89,11 @@ const PlaceOrder: React.FC = () => {
       gatewayCallbackTemplatePath,
     } = transaction
 
+    if (transactionId === 'NO-PAYMENT') {
+      window.location.replace(receiverUri)
+      return
+    }
+
     if (merchantTransactions?.length > 0) {
       const allPayments = transactionPayments.reduce<GatewayPayment[]>(
         (payments, transactionPayment) => {
@@ -122,11 +127,11 @@ const PlaceOrder: React.FC = () => {
         []
       )
 
+      let redirectUrl
+
       const hasSensitiveData = allPayments.some(payment =>
         paymentSystemsWithSensitiveData.includes(payment.paymentSystem!)
       )
-
-      let redirectUrl
 
       if (hasSensitiveData) {
         try {
