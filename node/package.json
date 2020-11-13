@@ -14,7 +14,7 @@
     "@types/node": "^7.10.7",
     "@types/ramda": "types/npm-ramda#dist",
     "@vtex/api": "^3.72.0",
-    "typescript": "3.8.3",
+    "typescript": "3.9.7",
     "vtex.checkout": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout@2.4.5/public/@types/vtex.checkout",
     "vtex.checkout-cart": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-cart@0.25.0/public/@types/vtex.checkout-cart",
     "vtex.checkout-container": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-container@0.4.0/public/@types/vtex.checkout-container",
