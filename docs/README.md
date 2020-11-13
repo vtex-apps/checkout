@@ -36,39 +36,63 @@ checkout
 ```
 
 ## GraphQL operations
+
 All GraphQL queries and mutations used by Checkout IO are located in [`checkout-resources`](https://github.com/vtex-apps/checkout-resources). This makes it possible to reuse GraphQL fragments and avoid duplicating the response for each query/mutation.
 
 ## Dependencies
+
 - [shipping-estimate-translator](https://github.com/vtex-apps/shipping-estimate-translator)
 - [format-currency](https://github.com/vtex-apps/format-currency)
 - [price](https://github.com/vtex-apps/price)
 - [checkout-resources](https://github.com/vtex-apps/checkout-resources)
+- [address-context](https://github.com/vtex-apps/address-context)
 
 ## Orchestrators
-- [order-manager](https://github.com/vtex-apps/order-manager)
+
 - [order-coupon](https://github.com/vtex-apps/order-coupon)
 - [order-items](https://github.com/vtex-apps/order-items)
+- [order-manager](https://github.com/vtex-apps/order-manager)
+- [order-payment](https://github.com/vtex-apps/order-profile)
 - [order-profile](https://github.com/vtex-apps/order-profile)
+- [order-shipping](https://github.com/vtex-apps/order-profile)
 
 ## UI components
-- [checkout](https://github.com/vtex-apps/checkout)
-- [checkout-container](https://github.com/vtex/checkout-container)
+
+- card-form-ui
 - [checkout-cart](https://github.com/vtex-apps/checkout-cart)
-- [product-list](https://github.com/vtex-apps/product-list)
-- [shipping-calculator](https://github.com/vtex-apps/shipping-calculator)
-- [checkout-summary](https://github.com/vtex-apps/checkout-summary)
+- [checkout-components](https://github.com/vtex-apps/checkout-components)
+- [checkout-container](https://github.com/vtex/checkout-container)
 - [checkout-coupon](https://github.com/vtex-apps/checkout-coupon)
-- [checkout-step-group](https://github.com/vtex-apps/checkout-step-group)
 - [checkout-identification](https://github.com/vtex-apps/checkout-identification)
+- [checkout-payment](https://github.com/vtex-apps/checkout-payment)
 - [checkout-profile](https://github.com/vtex-apps/checkout-profile)
 - [checkout-shipping](https://github.com/vtex-apps/checkout-shipping)
-- [checkout-payment](https://github.com/vtex-apps/checkout-payment)
+- [checkout-step-group](https://github.com/vtex-apps/checkout-step-group)
+- [checkout-summary](https://github.com/vtex-apps/checkout-summary)
+- [checkout](https://github.com/vtex-apps/checkout)
+- [phone-field](https://github.com/vtex-apps/phone-field)
+- [place-components](https://github.com/vtex-apps/place-components)
+- [product-list](https://github.com/vtex-apps/product-list)
+- [shipping-calculator](https://github.com/vtex-apps/shipping-calculator)
+
+## Country-related rules
+
+- [countries-data](https://github.com/vtex-apps/countries-data)
+- [country-data-settings](https://github.com/vtex-apps/country-data-settings)
+- [country-flags](https://github.com/vtex-apps/country-flags)
+- [document-field](https://github.com/vtex-apps/document-field)
 
 ## BFF
+
 - [checkout-graphql](https://github.com/vtex/checkout-graphql)
 - [gateway-graphql](https://github.com/vtex/gateway-graphql)
+- [geolocation-graphql-interface](https://github.com/vtex-apps/geolocation-graphql-interface)
+- [google-geolocation-resolver](https://github.com/vtex-apps/google-geolocation-resolver)
 - [places-graphql](https://github.com/vtex-apps/places-graphql)
 
 ## Extra
+
+- [checkout-cartman](https://github.com/vtex-apps/checkout-cartman)
 - [checkout-fullstory](https://github.com/vtex-apps/checkout-fullstory)
 - [checkout-io-tests](https://github.com/vtex-apps/checkout-io-tests)
+- [checkout-splunk](https://github.com/vtex-apps/checkout-splunk)
