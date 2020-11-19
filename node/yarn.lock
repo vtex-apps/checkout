@@ -1583,17 +1583,17 @@ uuid@^8.0.0:
   version "0.2.1"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-identification@0.2.1/public/@types/vtex.checkout-identification#2f06af2a2508e79bd46dab3a50f826682533f800"
 
-"vtex.checkout-step-group@https://pedrocheckout--checkoutio.myvtex.com/_v/private/typings/linked/v1/vtex.checkout-step-group@0.9.0+build1605554263/public/@types/vtex.checkout-step-group":
+"vtex.checkout-step-group@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-step-group@0.9.0/public/@types/vtex.checkout-step-group":
   version "0.9.0"
-  resolved "https://pedrocheckout--checkoutio.myvtex.com/_v/private/typings/linked/v1/vtex.checkout-step-group@0.9.0+build1605554263/public/@types/vtex.checkout-step-group#c0160c3f760d9c8d9f664e8c8fadd7f5d32377bc"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-step-group@0.9.0/public/@types/vtex.checkout-step-group#fddf8cd9e618905263f470feba06c63f90926b6b"
 
-"vtex.checkout-summary@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-summary@0.16.0/public/@types/vtex.checkout-summary":
-  version "0.16.0"
-  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-summary@0.16.0/public/@types/vtex.checkout-summary#54dc38ce378a55418e4892040ca54a8edf8ffd10"
+"vtex.checkout-summary@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-summary@0.17.0/public/@types/vtex.checkout-summary":
+  version "0.17.0"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-summary@0.17.0/public/@types/vtex.checkout-summary#fc009163add7a92010ab6fb6d759d563c68ac675"
 
-"vtex.checkout@https://pedrocheckout--checkoutio.myvtex.com/_v/private/typings/linked/v1/vtex.checkout@2.7.1+build1605204496/public/@types/vtex.checkout":
+"vtex.checkout@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout@2.7.2/public/@types/vtex.checkout":
   version "0.0.0"
-  resolved "https://pedrocheckout--checkoutio.myvtex.com/_v/private/typings/linked/v1/vtex.checkout@2.7.1+build1605204496/public/@types/vtex.checkout#d0bc325d9594468aeb014bcf569ca41a9464edfb"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout@2.7.2/public/@types/vtex.checkout#635bde611514317a0761d69dc911d28fa6a5fc41"
 
 "vtex.css-handles@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.css-handles@0.4.4/public/@types/vtex.css-handles":
   version "0.4.4"
@@ -1615,9 +1615,9 @@ uuid@^8.0.0:
   version "0.8.7"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.order-manager@0.8.7/public/@types/vtex.order-manager#d666dbf9c6d630dba38ac26e815ffaa3811933df"
 
-"vtex.order-payment@https://pedrocheckout--checkoutio.myvtex.com/_v/private/typings/linked/v1/vtex.order-payment@0.7.0+build1605552691/public/@types/vtex.order-payment":
+"vtex.order-payment@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.order-payment@0.7.0/public/@types/vtex.order-payment":
   version "0.7.0"
-  resolved "https://pedrocheckout--checkoutio.myvtex.com/_v/private/typings/linked/v1/vtex.order-payment@0.7.0+build1605552691/public/@types/vtex.order-payment#24c1b88cce8455f8f59b11f42e8708b63fbe9d57"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.order-payment@0.7.0/public/@types/vtex.order-payment#5f724f1e7599986b0c00ea97e84238ab8ec2fe12"
 
 "vtex.pixel-interfaces@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.pixel-interfaces@1.1.1/public/_types/react":
   version "0.0.0"
@@ -1635,9 +1635,9 @@ uuid@^8.0.0:
   version "0.11.2"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.rich-text@0.11.2/public/@types/vtex.rich-text#0087d1e1d18adbf054a4f3b12270d2c068f30d00"
 
-"vtex.store-components@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-components@3.131.3/public/@types/vtex.store-components":
-  version "3.131.3"
-  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-components@3.131.3/public/@types/vtex.store-components#0f1e89f0d326747f4a01c2178610dd2c65b32115"
+"vtex.store-components@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-components@3.132.0/public/@types/vtex.store-components":
+  version "3.132.0"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-components@3.132.0/public/@types/vtex.store-components#df6ee92d49029eee3e4de1e1c7ccda99a8b7404a"
 
 "vtex.store-drawer@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-drawer@0.14.0/public/@types/vtex.store-drawer":
   version "0.14.0"
