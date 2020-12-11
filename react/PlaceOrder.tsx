@@ -213,6 +213,7 @@ const PlaceOrder: React.FC = () => {
         </div>
       )}
       <Button
+        id="place-order-button"
         block
         size="large"
         onClick={handlePlaceOrder}
