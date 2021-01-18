@@ -1,7 +1,7 @@
 {
   "vendor": "vtex",
   "name": "checkout",
-  "version": "2.7.3",
+  "version": "2.8.0",
   "title": "Checkout UI",
   "description": "Checkout UI for the Store Framework",
   "defaultLocale": "pt-BR",
