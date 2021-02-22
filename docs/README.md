@@ -9,7 +9,7 @@ store
     ├── order-shipping
     ├── order-profile
     ├── order-payment
-    └── checkout-container
+    └── checkout-container (router)
 ```
 
 ## Components and data (BFF - Backend For Frontend)
@@ -24,13 +24,13 @@ checkout
 |   ├── checkout-summary
 |   |   └── checkout-coupon (controlled by order-coupon)
 |   └── shipping-calculator (controlled by order-shipping)
-|       └── address-form
+|       └── checkout-shipping
 |
 └── checkout-container (provides utilities used by the checkout steps)
     ├── checkout-identification
     └── checkout-step-group
         ├── checkout-profile (contains the profile form)
-        ├── checkout-shipping (contains the shipping form)
+        ├── checkout-shipping (contains the shipping form and shipping address)
         └── checkout-payment (contains the payment form)
 ... to be continued
 ```
@@ -43,7 +43,7 @@ All GraphQL queries and mutations used by Checkout IO are located in [`checkout-
 
 - [shipping-estimate-translator](https://github.com/vtex-apps/shipping-estimate-translator)
 - [format-currency](https://github.com/vtex-apps/format-currency)
-- [price](https://github.com/vtex-apps/price)
+- [formatted-price](https://github.com/vtex-apps/formatted-price)
 - [checkout-resources](https://github.com/vtex-apps/checkout-resources)
 - [address-context](https://github.com/vtex-apps/address-context)
 
@@ -52,9 +52,9 @@ All GraphQL queries and mutations used by Checkout IO are located in [`checkout-
 - [order-coupon](https://github.com/vtex-apps/order-coupon)
 - [order-items](https://github.com/vtex-apps/order-items)
 - [order-manager](https://github.com/vtex-apps/order-manager)
-- [order-payment](https://github.com/vtex-apps/order-profile)
+- [order-payment](https://github.com/vtex-apps/order-payment)
 - [order-profile](https://github.com/vtex-apps/order-profile)
-- [order-shipping](https://github.com/vtex-apps/order-profile)
+- [order-shipping](https://github.com/vtex-apps/order-shipping)
 
 ## UI components
 
