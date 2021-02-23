@@ -78,7 +78,12 @@
   },
 
   "checkout-step-group#checkout-mobile": {
-    "children": ["profile-step", "shipping-step", "payment-step"],
+    "children": [
+      "profile-step",
+      "shipping-step",
+      "address-step",
+      "payment-step"
+    ],
     "props": {
       "blockClass": "checkoutMobile"
     }
