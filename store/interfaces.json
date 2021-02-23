@@ -25,15 +25,13 @@
     "before": ["header.full.checkout"],
     "around": ["checkout-container"],
     "after": ["footer.checkout"],
-    "composition": "children",
-    "render": "client"
+    "composition": "children"
   },
   "store.checkout.identification": {
     "before": ["header.full.checkout"],
     "around": ["checkout-container"],
     "after": ["footer.checkout"],
-    "composition": "children",
-    "render": "client"
+    "composition": "children"
   },
   "header.full.checkout": {
     "component": "Empty"
