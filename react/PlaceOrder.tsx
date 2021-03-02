@@ -107,11 +107,14 @@ const PlaceOrder: React.FC = () => {
                 return null
               }
 
+              const { merchantSellerPayments, ...payment } = transactionPayment
+
               return {
-                ...transactionPayment,
                 ...merchantPayment,
+                ...payment,
                 currencyCode: currency as string,
                 installmentsValue: merchantPayment.installmentValue,
+                installmentsInterestRate: merchantPayment.interestRate,
                 transaction: {
                   id: merchantTransaction.transactionId,
                   merchantName: merchantTransaction.merchantName,
