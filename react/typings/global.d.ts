@@ -37,7 +37,7 @@ declare global {
     merchantName: string
   }
 
-  interface GatewayPayment extends TransactionPayment, MerchantSellerPayment {
+  interface GatewayPayment extends Payment, MerchantSellerPayment {
     transaction: GatewayPaymentTransaction
     currencyCode: string
   }
