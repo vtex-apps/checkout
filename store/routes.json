@@ -6,7 +6,7 @@
     "path": "/cart/add/"
   },
   "store.checkout.order-form": {
-    "path": "/checkout"
+    "path": "/checkout/(:route)"
   },
   "store.checkout.identification": {
     "path": "/checkout/identification"
