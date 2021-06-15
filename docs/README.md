@@ -1,6 +1,6 @@
 # VTEX Checkout
 
-## Orchestrators
+## Controllers
 
 ```
 store
@@ -47,7 +47,7 @@ All GraphQL queries and mutations used by Checkout IO are located in [`checkout-
 - [checkout-resources](https://github.com/vtex-apps/checkout-resources)
 - [address-context](https://github.com/vtex-apps/address-context)
 
-## Orchestrators
+## Controllers
 
 - [order-coupon](https://github.com/vtex-apps/order-coupon)
 - [order-items](https://github.com/vtex-apps/order-items)
