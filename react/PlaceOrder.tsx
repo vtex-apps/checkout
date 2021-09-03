@@ -53,7 +53,9 @@ const PlaceOrder: React.FC = () => {
     const transactionData = {
       referenceId: orderForm.id,
       value,
-      referenceValue,
+      // FIXME: This is meant to place the order since we didn't
+      // use the actual orderForm to calculate the full price.
+      referenceValue: value,
       interestValue,
       savePersonalData: true,
       optinNewsLetter: false,
