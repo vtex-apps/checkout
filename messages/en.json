@@ -4,5 +4,6 @@
   "store/edit-cart-label": "Edit Cart",
   "store/view-cart-label": "View Cart",
   "store/place-order.close-error-alert-label": "Close",
-  "store/place-order.generic-error-message": "The transaction can't be completed. Please try again soon."
+  "store/place-order.generic-error-message": "The transaction can't be completed. Please try again soon.",
+  "store/place-order.gateway-response-error-message": "Your purchase has not been completed. Your credit card information has been declined by your credit card company due to an incorrect address being entered or lack of funds."
 }
