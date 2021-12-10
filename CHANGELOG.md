@@ -7,7 +7,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-## [2.9.1] - 2021-05-10
 ### Fixed
 - Show error message when gateway callback returns an error response.
 
