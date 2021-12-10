@@ -194,6 +194,14 @@ const PlaceOrder: React.FC = () => {
 
       if (callbackResponse.ok) {
         window.location.replace(redirectUrl)
+      } else {
+        setPlacingOrder(false)
+        setErrorMessage(
+          intl.formatMessage({
+            id: 'store/place-order.gateway-response-error-message',
+          })
+        )
+        return
       }
     } else if (!receiverUri) {
       setPlacingOrder(false)

@@ -4,5 +4,6 @@
   "store/edit-cart-label": "Editar Carrinho",
   "store/view-cart-label": "Ver Carrinho",
   "store/place-order.close-error-alert-label": "Fechar",
-  "store/place-order.generic-error-message": "A transação não pôde ser completada. Por favor, tente novamente mais tarde."
+  "store/place-order.generic-error-message": "A transação não pôde ser completada. Por favor, tente novamente mais tarde.",
+  "store/place-order.gateway-response-error-message": "Sua compra não foi finalizada devido a algum problema na autorização do pagamento. Você pode ter preenchido algum dado incorretamente ou pode ter ocorrido algum problema com a operadora, no caso de compra com cartão."
 }
