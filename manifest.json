@@ -5,7 +5,6 @@
   "title": "Checkout UI",
   "description": "Checkout UI for the Store Framework",
   "defaultLocale": "pt-BR",
-  "registries": ["smartcheckout"],
   "builders": {
     "docs": "0.x",
     "node": "6.x"
