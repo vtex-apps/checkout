@@ -9,13 +9,16 @@ export class FastCheckoutClient extends ExternalClient {
     })
   }
 
-  public getPage(pathname: string): Promise<IOResponse<string>> {
+  public getPage(
+    pathname: string,
+    cookies?: string
+  ): Promise<IOResponse<string>> {
     const url = new URL(pathname, BASE_URL)
 
     url.searchParams.set('an', this.context.account)
 
     return this.http.getRaw(url.pathname + url.search, {
-      headers: { 'X-Vtex-Use-Https': 'true' },
+      headers: { 'X-Vtex-Use-Https': 'true', cookie: cookies ?? '' },
     })
   }
 }
