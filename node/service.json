@@ -4,5 +4,14 @@
   "timeout": 2,
   "minReplicas": 2,
   "maxReplicas": 4,
-  "routes": {}
+  "routes": {
+    "checkout": {
+      "path": "/checkout",
+      "public": true
+    },
+    "cart": {
+      "path": "/cart",
+      "public": true
+    }
+  }
 }

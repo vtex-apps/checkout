@@ -1,3 +1,9 @@
 import { IOClients } from '@vtex/api'
 
-export class Clients extends IOClients {}
+import { FastCheckoutClient } from './fastcheckout'
+
+export class Clients extends IOClients {
+  public get fastCheckout() {
+    return this.getOrSet('fastCheckout', FastCheckoutClient)
+  }
+}

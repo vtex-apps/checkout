@@ -11,5 +11,14 @@
     "node": "6.x"
   },
   "dependencies": {},
+  "policies": [
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "checkout.vtex.io",
+        "path": "*"
+      }
+    }
+  ],
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
 }
