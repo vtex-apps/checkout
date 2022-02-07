@@ -23,6 +23,6 @@
   "typeAcquisition": {
     "enable": false
   },
-  "include": ["typings.d.ts", "./**/*"],
+  "include": ["./**/*"],
   "exclude": ["node_modules"]
 }

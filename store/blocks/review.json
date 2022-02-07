@@ -1,8 +1,0 @@
-{
-  "review-container#desktop": {
-    "children": ["place-order"]
-  },
-  "review-container#mobile": {
-    "children": ["summary-wrapper#review", "place-order"]
-  }
-}
