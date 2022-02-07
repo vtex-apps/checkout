@@ -1,4 +1,4 @@
-import { ExternalClient, IOContext } from '@vtex/api'
+import { ExternalClient, IOContext, IOResponse } from '@vtex/api'
 
 const BASE_URL = 'http://checkout.vtex.io'
 
@@ -9,12 +9,12 @@ export class FastCheckoutClient extends ExternalClient {
     })
   }
 
-  public getPage(pathname: string): Promise<string> {
+  public getPage(pathname: string): Promise<IOResponse<string>> {
     const url = new URL(pathname, BASE_URL)
 
     url.searchParams.set('an', this.context.account)
 
-    return this.http.get(url.pathname + url.search, {
+    return this.http.getRaw(url.pathname + url.search, {
       headers: { 'X-Vtex-Use-Https': 'true' },
     })
   }

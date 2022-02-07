@@ -11,6 +11,7 @@ export default new Service({
     options: {},
   },
   routes: {
+    checkoutNext: middlewares,
     checkout: middlewares,
     cart: middlewares,
   },

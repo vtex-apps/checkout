@@ -1,8 +1,26 @@
+import { IOResponse } from '@vtex/api'
+
 export async function renderPage(ctx: Context) {
   const pathname = ctx.path
 
-  const renderResult = await ctx.clients.fastCheckout.getPage(pathname)
+  let renderResponse: IOResponse<string>
 
-  ctx.body = renderResult
-  ctx.status = 200
+  try {
+    renderResponse = await ctx.clients.fastCheckout.getPage(pathname)
+  } catch (e) {
+    if (!e.isAxiosError) {
+      throw e
+    }
+
+    renderResponse = e.response
+  }
+
+  ctx.body = renderResponse.data
+  ctx.status = renderResponse.status
+
+  Object.entries(renderResponse.headers).forEach(
+    ([headerName, headerValue]) => {
+      ctx.set(headerName, headerValue)
+    }
+  )
 }

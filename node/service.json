@@ -5,12 +5,16 @@
   "minReplicas": 2,
   "maxReplicas": 4,
   "routes": {
+    "checkoutNext": {
+      "path": "/checkout/_next/*path",
+      "public": true
+    },
     "checkout": {
       "path": "/checkout",
       "public": true
     },
     "cart": {
-      "path": "/cart",
+      "path": "/checkout/cart",
       "public": true
     }
   }
