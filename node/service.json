@@ -1,14 +1,21 @@
 {
-  "stack": "nodejs",
   "memory": 256,
-  "runtimeArgs": [
-    "--optimize_for_size",
-    "--max_old_space_size=192"
-  ],
+  "ttl": 10,
+  "timeout": 2,
+  "minReplicas": 2,
+  "maxReplicas": 4,
   "routes": {
-    "settings": {
-      "path": "/settings",
-      "smartcache": true
+    "checkoutNext": {
+      "path": "/checkout/_next/*path",
+      "public": true
+    },
+    "checkout": {
+      "path": "/checkout",
+      "public": true
+    },
+    "cart": {
+      "path": "/checkout/cart",
+      "public": true
     }
   }
 }

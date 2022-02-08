@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Added
+- Proxy for fastcheckout server on `/checkout` and `/cart` routes.
+
+### Removed
+- Builders `react`, `store`, `messages` and `assets`.
+- Route `/settings`.
 
 ## [2.9.0] - 2021-05-10
 ### Changed

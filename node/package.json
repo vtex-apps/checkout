@@ -7,36 +7,14 @@
     "lint": "tsc --noEmit"
   },
   "dependencies": {
-    "ramda": "^0.26.1"
+    "cookie": "^0.4.2"
   },
   "devDependencies": {
+    "@types/cookie": "^0.4.1",
     "@types/koa": "^2.0.39",
-    "@types/node": "^7.10.7",
-    "@types/ramda": "types/npm-ramda#dist",
-    "@vtex/api": "^3.72.0",
+    "@types/node": "^12.0.0",
+    "@vtex/api": "6.45.6",
     "typescript": "3.9.7",
-    "vtex.checkout": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout@2.8.3/public/@types/vtex.checkout",
-    "vtex.checkout-cart": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-cart@0.33.0/public/@types/vtex.checkout-cart",
-    "vtex.checkout-container": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-container@0.8.0/public/@types/vtex.checkout-container",
-    "vtex.checkout-graphql": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-graphql@0.56.2/public/@types/vtex.checkout-graphql",
-    "vtex.checkout-identification": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-identification@0.2.1/public/@types/vtex.checkout-identification",
-    "vtex.checkout-step-group": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-step-group@0.13.0/public/@types/vtex.checkout-step-group",
-    "vtex.checkout-summary": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-summary@0.17.1/public/@types/vtex.checkout-summary",
-    "vtex.css-handles": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.css-handles@0.4.4/public/@types/vtex.css-handles",
-    "vtex.device-detector": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.device-detector@0.2.6/public/@types/vtex.device-detector",
-    "vtex.flex-layout": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.flex-layout@0.16.0/public/@types/vtex.flex-layout",
-    "vtex.order-coupon": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.order-coupon@0.7.1/public/@types/vtex.order-coupon",
-    "vtex.order-manager": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.order-manager@0.9.0/public/@types/vtex.order-manager",
-    "vtex.order-payment": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.order-payment@0.8.0/public/@types/vtex.order-payment",
-    "vtex.pixel-interfaces": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.pixel-interfaces@1.1.1/public/_types/react",
-    "vtex.pixel-manager": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.pixel-manager@1.6.1/public/@types/vtex.pixel-manager",
-    "vtex.product-list": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.product-list@0.28.2/public/@types/vtex.product-list",
-    "vtex.rich-text": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.rich-text@0.13.0/public/@types/vtex.rich-text",
-    "vtex.store": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store@2.113.0/public/@types/vtex.store",
-    "vtex.store-components": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-components@3.142.0/public/@types/vtex.store-components",
-    "vtex.store-drawer": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-drawer@0.15.1/public/@types/vtex.store-drawer",
-    "vtex.store-footer": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-footer@2.22.0/public/@types/vtex.store-footer",
-    "vtex.store-header": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-header@2.25.7/public/@types/vtex.store-header",
-    "vtex.styleguide": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.styleguide@9.136.1/public/@types/vtex.styleguide"
+    "vtex.checkout": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout@2.8.3/public/@types/vtex.checkout"
   }
 }
