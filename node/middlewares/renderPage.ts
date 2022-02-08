@@ -69,6 +69,19 @@ export async function renderPage(ctx: Context) {
     renderResponse = e.response
   }
 
+  if (renderResponse.status === 308 /* permanent redirect */) {
+    const redirectUrl = new URL(
+      renderResponse.headers.location,
+      `http://${ctx.get('x-forwarded-host')}`
+    )
+
+    if (redirectUrl.searchParams.has('an')) {
+      redirectUrl.searchParams.delete('an')
+    }
+
+    renderResponse.headers.location = redirectUrl.pathname + redirectUrl.search
+  }
+
   ctx.body = renderResponse.data
   ctx.status = renderResponse.status
 
