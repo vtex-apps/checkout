@@ -1,0 +1,16 @@
+- name: docs
+  description: Documentation pipelines
+  build:
+    provider: dkcicd
+    pipelines:
+    - name: techdocs-v1
+      parameters:
+        entityReference: default/component/checkout
+        sourceDir: ./
+      when:
+      - event: push
+        source: branch
+        regex: 3.x
+        path:
+        - docs/**
+      runtime: {}
