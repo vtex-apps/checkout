@@ -2,12 +2,12 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: checkoutio-ui-container
-  description: Loading structure for Checkout IO
+  description: Checkout UI container for the VTEX Store Framework - provides the loading structure and UI components for the Checkout IO experience
   annotations:
     github.com/project-slug: vtex-apps/checkout
-    vtex.com/o11y-os-index: ""
-    vtex.com/janus-acronym: ""
-    grafana/dashboard-selector: ""
+    vtex.com/o11y-os-index: ''
+    vtex.com/janus-acronym: ''
+    grafana/dashboard-selector: ''
     backstage.io/techdocs-ref: dir:../
     vtex.com/application-id: T3ZFAMZO
   tags:
