@@ -1,0 +1,16 @@
+- name: checkoutio-ui-container
+  referenceId: T3ZFAMZO
+  pipelines:
+    - name: techdocs-v1
+      parameters:
+        entityReference: default/component/checkoutio-ui-container
+        indexFile: README.md
+      when:
+        - event: push
+          source: branch
+          regex: 3.x
+          path:
+            - 'docs/**'
+            - '.vtex/deployment.yaml'
+            - '.vtex/deployment.json'
+            - 'README.md'
